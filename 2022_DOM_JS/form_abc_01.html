@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form_abc</title>
+</head>
+<body>
+<p> Принадлежит ли c промежутку a - b ?</p>
+<form action="http://198.211.123.137:7633/cgi-bin/form_action.py" id="UserEnter" name="UserEnter">
+    <ul>
+        <li>a: <input name="a" size="4" type="text" value=10></li>
+        <li>b: <input name="b" size="4" type="text" value=20></li>
+        <li>c: <input name="c" size="4" type="text" value=30></li>
+        <li>Название файла: <input name="000_file_name" type="Техт" value="g06u33_file.txt"></li>
+        <li>Тип записи в файл:<select name="010_mode">
+            <OPTION value="a">a - дозаписать в файл(таблицу базы)</OPTION>
+            <OPTION value="w">w - очистить файл(таблицу базы) и записать</OPTION>
+        </select></li>
+        <li><input type="button" value="Проверить"></li>
+    </ul>
+</form>
+<p id="result"></p>
+<script src="./js/form_abc.js"></script>
+</body>
+</html>

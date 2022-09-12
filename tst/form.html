@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Форма_JS</title>
+    <!--    <link href="./css/bootstrap.min.css" rel="stylesheet">-->
+
+</head>
+<body>
+<pre>
+<h2>Форма</h2>
+<form action="http://198.211.123.137:7633/cgi-bin/form_action.py" method="get" target="_self">
+    Фамилия: <input type="text" name="variable_010" placeholder="фамилия" >
+    <!--Нижерасположенное удалять нельзя, редактировать можно-->
+    Название файла: <input name="000_file_name" type="Техт" value="g06u33_file.txt">
+    Тип записи в файл:<select name="010_mode">
+        <OPTION value="a">a - дозаписать в файл(таблицу базы)</OPTION>
+        <OPTION value="w">w - очистить файл(таблицу базы) и записать </OPTION>
+        </select>
+    <input name="015_abc" type="hidden" value="5">
+    <input name="function" type="hidden" value="page">
+    <input name="page_id" type="hidden" value="8">
+    <input type="submit">
+</form>
+</pre>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="js/form.js"></script>
+<pre>
+Создать простейший макет паспорта, и использую JS, оуществить его заполнение.
+ - необходимые значения предварительно присвоить переменным
+ - необходимые значения вввести вручную в нужном месте
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+*{margin:0px; border-width:0px; border-style:solid; border-color:rgb(143, 54, 54);}
+
+html{
+margin:0px;
+text-decoration:none;
+background-color:rgba(150,150,150,1);
+}
+
+body{
+background-color: rgba(220, 220, 220, 1);
+margin:5px;
+padding:1px
+}
+
+p{
+margin-top:0.2em  
+}
+
+h1{font-size:1.5em; font-style:italic; font-weight:900; color:red;}
+h2 {font-size:1.3em;	text-align:center; padding:0.5em; font-weight:600}
+h3,h4 {font-size:1.0em; font-weight:600}
+
+.hellobox {
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+align-items:center;
+height:4em;
+background-color:rgba(100,150,150,1.0);
+background-image: url("./engine.jpg");
+background-repeat:no-repeat;
+background-position-y:10%;
+background-position-x:10%;
+background-size:10%;
+#background-position: center;
+}
+
+nav ul{
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap; 
+justify-content:space-around;
+align-items:stretch;
+padding: 1px;  
+list-style-type:none;
+padding-top: 0.1em;
+padding-bottom: 0.1em;
+border-bottom-width:1px; border-bottom-style:solid; border-color:rgba(150,150,150,1);
+}
+
+a {border:0px solid; color:#4A90F2; text-decoration:none;}
+a:hover  {color:#4A90F2; text-decoration:underline;}
+a.active {background-color:rgba(250, 250, 250, 1); color:#4A90F2; text-decoration:underline; }
+
+main{
+margin:-1px;
+padding: 1px;  
+border-bottom-width:1px; border-bottom-style:solid; border-color:rgba(150,150,150,1);  
+}
+
+footer {
+margin:-1px;
+}
+
+input{
+background-color: rgba(250, 250, 250, 1);
+border-width: 1px; border-style:solid; border-color:rgba(150,150,150,1);
+}
+
+.myClass{
+color: green;  
+}
+
+#myId{
+color: red;
+}
+
+img{margin:.4em; padding:.2em; border-width:1px; border-style:solid; border-color:rgba(150,150,150,1); vertical-align:top;}

@@ -1,0 +1,10 @@
+DefaultLanguage ru
+AddDefaultCharset windows-1251
+Options +Indexes
+DirectoryIndex index.html
+AuthUserFile /var/www/marshirov/data/etc/.htpasswd
+AuthType Basic
+AuthName "i"
+Require valid-user
+#htpasswd -c .htpasswd i
+#~/var/../data/etc/.htpasswd

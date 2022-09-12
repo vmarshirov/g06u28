@@ -1,0 +1,26 @@
+*{
+text-decoration:none;
+background-color:none;
+left:0px;
+top:0px;
+border: 0px solid;
+margin:2px;
+padding:2px;
+}
+
+ul{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:space-around;
+align-items:left;
+list-style-type:none;
+border-width:0px; border-style:solid;
+
+padding:0px;  
+}
+
+a {color: blue; background-color:silver; border-width:0px; border-style:solid; text-decoration:none;  }
+a:hover {color: black; background-color:white; text-decoration:underline;}
+a:focus {color: black; background-color:red; text-decoration:underline;}
+

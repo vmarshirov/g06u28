@@ -1,0 +1,31 @@
+<!DOCTYPE html>    
+<html>        
+<head>        
+<meta charset="utf-8">
+<title>Часы</title>
+<script>        
+function displayTime() {
+    var element = document.getElementById("clock");
+    var now = new Date();
+    element.innerHTML = now.toLocaleTimeString();
+    setTimeout(displayTime, 1000);
+}
+window.onload = displayTime; // Начать отображение времени после загрузки документа
+</script>
+
+<style>        /* Таблица стилей CSS для часов */
+#clock {        /* Стили применяются к элементу с id="clock" */
+    font: bold 24pt sans;     /* Использовать большой полужирный шрифт */ 
+    background: #ddf;        /* Светлый, голубовато-серый фон */
+    padding: 10px;        /* Отступы вокруг */
+    border: solid black 2px;     /* И сплошная черная рамка */ 
+    border-radius: 10px;         /* Закругленные углы (если поддерживаются) */
+}
+</style>
+</head>
+
+<body>
+<h1>Цифровые часы</h1>
+<span id="clock"></span>
+</body>
+</html>

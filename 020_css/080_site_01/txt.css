@@ -1,0 +1,72 @@
+*{
+margin:2px;
+padding:2px;
+text-decoration:none;
+//background-color:none;
+//background-color:rgba(125,125,125,1);
+}
+
+body{
+background-color: rgba(100, 100, 100, 1);
+}
+
+form {
+background-color: rgba(200, 200, 200, 1);
+}
+
+
+
+.hellobox {
+display:flex;
+flex-direction:row;
+flex-wrap:wrap; 
+justify-content:space-around;
+align-items:end;
+padding-bottom: 0em;
+height:11em;
+background-color:rgba(100,100,100,1.0);
+background-image: url("./engine.jpg");
+background-repeat:no-repeat;
+background-position-y: 20%;
+background-position-x: 50%;
+background-size:100%;
+}
+
+h1{
+font-size:2.5em;
+font-style:italic;
+color:red;
+}
+
+h2 {font-size:1.5em;	color:#fff;	text-align:center;	padding:1.0em;}
+h3,h4 {font-size:1.2em;}
+img {border-width:3; border-style:solid; border-color:black;	vertical-align:middle;}
+
+nav{
+display:flex;             
+flex-direction:row;
+flex-wrap:wrap; 
+justify-content:space-around;
+align-items:stretch;
+
+list-style-type:none;
+padding-top: 1em;
+padding-bottom: 1em;
+background-color:rgba(200,200,200,1.0);
+
+border-bottom-width:1px; border-bottom-style:solid; border-color:rgba(150,150,150,1);    
+}
+
+li {background-color:gray; border: 5px solid red;}
+a {border:0px; background-color:gray; color:blue;  text-decoration:none;}
+a:hover  {color: black; text-decoration:underline;}
+.current {color: red;}
+
+main{
+margin:-1px;
+}
+
+footer {
+margin:2px;
+background-color: rgba(200, 200, 200, 1);
+}

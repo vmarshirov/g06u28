@@ -1,0 +1,81 @@
+* {
+    border-width: 1px;
+    border-style: solid;
+    margin: 5px: auto;
+    padding: 4px;
+}
+
+body {
+    background-color: white;
+    background-image: url("./1.png");
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+    background-position-x: 100%;
+    background-size: 10%;
+    color: black
+}
+
+p {
+    background: silver;
+}
+
+img {
+    margin: 10px;
+    padding: 3px;
+    height: 40px;
+    float: left;
+    background-color: yellow;
+}
+
+flex_card {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+card {
+    margin: 2px;
+}
+
+.note {
+    color: red;
+    font-weight: bold;
+}
+
+#news {
+    color: green;
+}
+
+p font:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: rgba(150, 150, 150, 0.1);
+}
+
+a:focus {
+    color: brown;
+}
+
+.active {
+    color: red;
+    text-decoration: underline;
+    background-color: black;
+}

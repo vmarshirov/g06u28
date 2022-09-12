@@ -1,0 +1,5 @@
+DefaultLanguage ru
+AddDefaultCharset utf-8
+Options +Indexes
+DirectoryIndex index.htm
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flexbox example</title>
+    <style>
+            body {
+            margin: 3px;
+            padding: 5px;
+            background-color: burlywood;
+        }
+        
+        header {
+            margin: 30px;
+            background: purple;
+            height: 2rm;
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+            margin: 0;
+        }
+        
+        img {
+            height: 40px;
+            width: 300px;
+            border-style: solid;
+            border-width: 1px;
+            margin: 1rem;
+            padding: 0rem;
+            background-color: black;
+        }
+        
+        article {
+            width: 400px;
+            border-style: solid;
+            border-width: 1px;
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        /* flexbox CSS*/
+        
+        section {
+            display: flex;
+            /*главная ось*/
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: left;
+            /*поперечная ось */
+            align-items: flex-end;
+        }
+        
+        .flex_grow_basis_shrink {
+            /*
+            flex-grow:1;
+            flex-basis:50%
+            flex-shrink:4; /*flex-basis: 50% для article*/
+            */
+        }
+        
+        .align_self_order {
+            /*
+            order:1;
+            align-self: flex-start;
+            */
+            /*         
+        article:nth-of-type(3) {
+            flex: 3 200px;
+            display: flex;
+            flex-flow: column;
+        }
+        
+        article:nth-of-type(3) div:first-child {
+            flex: 1 100px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        button {
+            flex: 1 auto;
+            margin: 5px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Flexbox</h1>
+    </header>
+
+    <section>
+        <article class=".align_self_order">
+            <h2>Заголовок 1 (..align_self_order)</h2>
+            <img src="_">
+            <p>Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. </p>
+        </article>
+
+        <article class="flex_grow_basis_shrink">
+            <h2>Заголовок 2 (.flex_grow_basis_shrink)</h2>
+            <img src="_">
+            <p>Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа.
+            </p>
+        </article>
+
+        <article>
+            <h2>Заголовок 3</h2>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+            </div>
+            <div>
+                <img src="_">
+                <p>Содержание параграфа. </p>
+            </div>
+            <div>
+                <p>Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. </p>
+            </div>
+        </article>
+    </section>
+</body>
+
+
+</html>

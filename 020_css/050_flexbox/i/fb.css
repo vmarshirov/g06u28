@@ -1,0 +1,94 @@
+body {
+    max-width: max-content;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:rgba(250, 220, 150, 0.781);
+}
+
+header {
+    background: purple;
+    height: 2rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    height: 40px;
+    width: 150px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1rem;
+    padding: 0rem;
+    background-color: black;
+}
+
+section {
+    background-color: brown;
+}
+
+article {
+    width: 300px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+}
+
+/************************************/
+/* flexbox CSS*/
+section {
+    display: flex;
+    /*главная ось*/
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    /*поперечная ось */
+    align-items: flex-end;
+}
+
+article {
+}
+.flex_grow_basis_shrink {
+    /*
+flex-grow:1;
+flex-basis:50%
+*/
+    /*
+flex-shrink:4; flex-basis: 50% для article
+*/
+}
+
+.align_self_order {
+    /*
+order:1;
+align-self: flex-start;
+*/
+}
+
+/*
+article:hover  {
+border-width:10px;
+border-style:solid;
+display: flex;
+flex: 1 100px;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-around;
+}
+*/
+/*
+button {
+flex: 1 auto;
+margin: 5px;
+font-size: 18px;
+line-height: 1.5;
+}
+*/

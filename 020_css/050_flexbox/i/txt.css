@@ -1,0 +1,109 @@
+* {
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid red;
+}
+
+html {
+    display: block;
+    background-color: black;
+}
+
+body {
+    position: relative;
+    border: 1px solid green;
+    width: 1000px;
+    padding: 0em;
+}
+
+header {
+    background-color: rgb(10, 100, 100);
+}
+
+parent {
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+aside,
+main,
+article {
+    background-color: gray;
+}
+
+aside,
+main,
+article {
+    border: 1px solid red;
+}
+
+aside {
+    order: 0;
+    flex: 1;
+    flex-grow: auto;
+    align-self: auto;
+}
+
+main {
+    order: 0;
+    flex: 2;
+    flex-grow: auto;
+    align-self: auto;
+}
+
+article {
+    order: 0;
+    flex: 1;
+    flex-grow: auto;
+    align-self: auto;
+}
+
+section {
+    background-color: rgb(70, 100, 100);
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(100, 100, 100);
+}
+
+nav {
+    background-color: green;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: left;
+    width: 300px;
+    height: 150px;
+    list-style-type: none;
+    background-color: burlywood;
+    border-width: 4px;
+    border-style: solid;
+    border-color: greenyellow;
+    padding: 0em;
+    margin: 0em;
+}
+
+li {
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+/*
+a {color: blue;}
+a:hover {color: blue; background-color:white}
+.current {color: red;
+}
+*/

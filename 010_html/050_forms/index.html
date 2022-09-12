@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы. Отправляем данные на сервер</title>
+</head>
+
+
+<body>
+    <h1 align="center">Формы. Отправляем данные на сервер</h1>
+    <form action="http://198.211.123.137:7633/cgi-bin/form_action.py" method='get' target='_self'>
+        <p>Фамилия: <input type="Text" name="last_name" value="Петров" size=8></p>
+        <p>Возраст: <input type="Number" name="age" value="0" size=8></p>
+        <p>Место проживания:
+            <input type="Radio" name="place" value="Moscow">Москва
+            <input type="Radio" name="place" value="Nizhny" checked>Нижний
+        </p>
+        
+        <p>Стаж работы:
+            <input type="Checkbox" name="experience" value="10" checked>Маркетологом - 10
+            <input type="Checkbox" name="experience" value="20" checked>Экономистом -20
+            <input type="Checkbox" name="experience" value="30" checked>Менеджером -30
+        </p>
+        <p>Знание английского
+            <select name="languages">
+        <OPTION value="Владею свободно">Владею свободно</OPTION> 
+        <OPTION value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</OPTION> 
+        </select>
+        </p>
+        <p> Дополнительная информация:
+            <br>
+            <TEXTAREA name="textarea" rows=4 cols=80>Для заметок</TEXTAREA>
+        </p>
+        <p>Дата: <input type="date" name="user_date" value='2000-01-01'></p>
+        <p>Пароль: <input type="Password" name="password" value="123" size=9></p>
+        <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+        <p>Название файла: <input type="Техт" name="000_file_name" value="g06u28.txt">
+            <br>Тип записи в файл:<select name="010_mode">
+        <OPTION value="a">a - дозаписать в файл</OPTION> 
+        <OPTION value="w">w - очисить файл и записать в файл</OPTION> 
+        </select>
+            <input type="hidden" name="function" value="page">
+            <input type="hidden" name="page_id" value="3"></p>
+        <p> <input type="Reset" name="Reset" value="Обновить">
+            <input type="Submit" name="submit" value="Отправить">
+        </p>
+    </form>
+</body>
+<pre>
+<pre>
+В ~/public_html/education/forms:
+
+Задание 1
+
+Создать страницу позволяющую отправлять на удаленный сервер данные типа:
+- заказы товаров из эл.магазина
+- создание телефонный справочник
+- расчет оплаты за выполненную сдельную работу
+- прибыльность небольшой розничной точки
+- оценка инвестиционного проект
+или др.
+
+Задание 2
+
+Создать страницу, отправляющие данные паспорта на удаленный сервер
+Страница должна содержать все перечисленные примеры отправки данных,
+в качетве прототипа использовать ранее созданную таблицу с паспортом
+</pre>
+</html>

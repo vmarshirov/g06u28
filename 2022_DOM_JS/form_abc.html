@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form_abc</title>
+</head>
+<body>
+<p>Принадлежит ли целое С диапазону A-B? Если принадлежит - отправить все на сервер</p>
+<form action="http://198.211.123.137:7633/cgi-bin/form_action.py" id="UserEnter" target="_blank">
+    <ul>
+        <li><input name="formulation" type="hidden" value="#"></li>
+        <li><label>a: <input name="a" size="4" type="number" value=10></label></li>
+        <li><label>b: <input name="b" size="4" type="number" value=20></label></li>
+        <li><label>c: <input name="c" size="4" type="number" value=15></label></li>
+        <li><label>Название файла: <input name="000_file_name" type="text" value="g06u28_form_abc.txt"></label></li>
+        <li><label>Запись в файл:<select name="010_mode">
+            <OPTION value="w">w - очистить файл(таблицу базы) и записать</OPTION>
+            <OPTION value="a">a - записать в файл(таблицу базы)</OPTION>
+        </select></label></li>
+        <li><input name="result" type="hidden" value="#"></li>
+        <li><label><input id="verify" type="button" value="Проверить"></label></li>
+        <li><label><input id="send" type="button" value="Отправить"></label></li>
+    </ul>
+</form>
+<p id="result">Результаты вычислений: </p>
+<script src="./js/form_abc.js"></script>
+</body>
+</html>

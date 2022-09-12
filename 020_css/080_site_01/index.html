@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Страница</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="./txt.css">
+</head>
+
+<body>
+
+<div class="hellobox">
+    <h1>Привет,мир</h1><h1>Привет,мир</h1>
+</div>
+
+<nav>
+    <li><a href="../cgi-bin/engine.py?info_file=../public_html/page_1/info.htm">Первая страница</a></li>
+    <li><a class="current" href="../cgi-bin/engine.py?info_file=../public_html/page_2/info.htm">Вторая страница</a></li>
+    <li><a href="../cgi-bin/engine.py?info_file=../public_html/form/info.htm">Форма</a></li>
+    <li><a href="../cgi-bin/engine.py?info_file=../public_html/form/info.htm"><img src="https://nnov.hse.ru/f/src/global/i/logo.png" width="50px"></a></li>
+</nav>
+
+<main>
+    <form action="http://ed.nn2000.info/cgi-bin/f_submission.pl" target="_blank" method="get">
+        <p>Введите данные</p>
+        <p>Фамилия: <input type="text" name="last_name" value="" size="8"></p>
+        <p>Год рождения: <input type="text" name="year_of_birth" value="" size="8"></p>
+        <p>Опыт работы: <input type="text" name="experience" value="" size="8"></p>
+        <p><input type="hidden" name="file_name" value="file.txt" ></p>
+        <p><input type="submit" name="submit" value="Отправить"></p>
+    </form>
+</main>
+<footer>
+<p>Выходные данные, контакты и др.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+var someData = 'The data that I want to store for later.';
+localStorage.setItem('myDataKey', someData);
+localStorage.getItem("myDataKey")
+localStorage.key("myDataKey")
+https://gomakethings.com/using-localstorage-to-save-user-data-with-vanilla-javascript/
+
+--------
+https://stackoverflow.com/questions/35963412/append-data-to-localstorage-object
+
+https://stackoverflow.com/questions/18884840/adding-a-new-array-element-to-a-json-object/18884871
+
+https://stackoverflow.com/questions/35963412/append-data-to-localstorage-object	
