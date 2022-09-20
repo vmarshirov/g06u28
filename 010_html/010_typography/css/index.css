@@ -1,8 +1,19 @@
-.span_p {
+/*
+span{
     font-weight: bold;
-    font-size: 4.5rem;
-    color: brown;
+    font-size: 1.5rem;
+    color: red;
     background-color: aquamarine;
     word-spacing: 3rem;
     letter-spacing: 3.0rem;
 }
+
+.class_span{
+    color: green;
+}
+
+
+#identifier_span{
+    color: blue;
+}
+*/
