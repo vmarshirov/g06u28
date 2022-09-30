@@ -1,13 +1,14 @@
 // https://www.youtube.com/watch?v=QSF8JXFPR18&list=PLiOhsP3M5j5wIUlXkYMuWTVR8inofxLS0&index=7
 async function getResponce() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
-    let responce = await fetch("https://jsonplaceholder.typicode.com/photos")
+    let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     /*
         let content = await responce.text()
         console.log(JSON.parse(content))
     */
     let content = await responce.json()
-    console.log(content.splice(0, 10))
+    content = content.splice(0, 5)
+    console.log(content)
     /*
         let key
         for (key in content ) {
@@ -18,7 +19,6 @@ async function getResponce() {
         }
     */
 
-    content = content.splice(0, 5)
     let key
     let ul_0 = document.getElementsByTagName("ul")[0]
     for (key in content) {
