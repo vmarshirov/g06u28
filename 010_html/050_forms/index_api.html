@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Формы. Отправляем данные на сервер</title>
+</head>
+
+<body>
+<h1>Формы. Отправляем данные на сервер</h1>
+<form action="http://185.182.111.214:7633/cgi-bin/form_api.py" method='get' target='_self'>
+<form action="http://185.182.111.214:7633/cgi-bin/form_api.py" method='get' target='_self'>
+    <p>albumId: <input name="albumId" type="Text" value="1"></p>
+    <p>id: <input name="id" type="Text" value="5"></p>
+    <p>title: <input name="title" type="Text" value="natus nisi omnis corporis facere molestiae rerum in"></p>
+    <p>url: <input name="url" type="Text" value="https://via.placeholder.com/600/f66b97"></p>
+    <p>thumbnailUrl: <input name="thumbnailUrl" type="Text" value="https://via.placeholder.com/150/f66b97"></p>
+    <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+    <p>Название файла: <input name="000_file_name" type="Техт" value="g06u28.txt">
+        <br>Тип записи в файл:<select name="010_mode">
+            <OPTION value="a">a - дозаписать в файл</OPTION>
+            <OPTION value="w">w - очисить файл и записать в файл</OPTION>
+        </select>
+        <input name="function" type="hidden" value="page">
+        <input name="page_id" type="hidden" value="3"></p>
+    <p><input name="Reset" type="Reset" value="Обновить">
+        <input name="submit" type="Submit" value="Отправить">
+    </p>
+</form>
+</body>
+
+</html>
