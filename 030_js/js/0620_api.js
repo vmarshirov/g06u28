@@ -2,8 +2,8 @@
 async function getResponce() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
-    let responce = await fetch("http://185.182.111.214:7633/tmp/g06u28.txt_api.json")
-    //let responce = await fetch("http://185.182.111.214:7633/tmp/index_api.txt_only.json")
+    //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
+    let responce = await fetch("../../tmp/g06u28.txt_api.json")
 
 /*
 
@@ -20,7 +20,7 @@ async function getResponce() {
         // console.log(JSON.parse(content))
 
     let content = await responce.json()
-    content = content.splice(0, 5)
+    content = content.splice(0, 2)
     console.log(content)
     /*
         let key
