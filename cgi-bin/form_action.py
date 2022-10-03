@@ -10,7 +10,7 @@ def form_dictionary():
     print("date:", time.strftime('%Y-%m-%d %H:%M'))
     print("REMOTE_ADDR:", os.environ["REMOTE_ADDR"])
 
-    print ("\nАнализ строки запроса")
+    print ("\nСтрока запроса")
     form = cgi.FieldStorage()
     print("form: ", form)
     print ("ключи(form.keys):", form.keys())
@@ -159,9 +159,9 @@ Content-type:text/html\r\n
 ''')
 result_form = form_dictionary()#Анализируем строку запроса
 print('\nФункция вернула:\n', result_form, '\n')
-file_write_read(result_form)
-file_write_read_json(result_form)
-file_write_read_json_only()
+# file_write_read(result_form)
+# file_write_read_json(result_form)
+# file_write_read_json_only()
 
 print('\n</pre>\n</body>\n<html>')
 

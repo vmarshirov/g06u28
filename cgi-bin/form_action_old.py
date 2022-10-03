@@ -16,8 +16,8 @@ def form_dictionary():
     print ("ключи(form.keys):", form.keys())
 
     form_keys_list=list()
-    form_values_list=list()
-    form_dict=dict()
+    form_values_list=list() 
+    form_dict=dict() 
     print  ("Названия ключей  и их значения (как есть)")
     i=0
     for form_key in form.keys():
@@ -87,21 +87,20 @@ def file_write_read_json(my_dict):
         file_stream = open(file, mode='a', encoding="utf-8", errors=None)
         file_stream.write(json.dumps(my_dict, ensure_ascii=False))
         sys.stdout.write(json.dumps(my_dict, ensure_ascii=False))
-        file_stream.write(",\n")
+        file_stream.write("\n")
         file_stream.close()
         r_stream = open(file, mode='r', encoding="utf-8")
-        print ("\n\nПострочно считываем строки из ", os.environ[ "HTTP_HOST" ] , file[2:],  sep='')
+        print ("\n\nПострочно считываем строки и преобразуем в словарь из ", os.environ[ "HTTP_HOST" ] , file[2:],  sep='')
         for line in r_stream.readlines():
             print(line, end='')
-            # new_dict =  json.loads(line)
-            # print(new_dict)
-            # list_ip.append(new_dict.get('REMOTE_ADDR'))
-        r_stream.close()
-        # print("Список: ",list_ip)
+            new_dict =  json.loads(line)
+            print(new_dict)
+            list_ip.append(new_dict.get('REMOTE_ADDR'))
+        print("Список: ",list_ip)
 
 
-def file_write_read_json_api():
-    print ("\n\ndef file_write_read_json_api:\n________________")
+def file_write_read_json_only():
+    print ("\n\ndef file_write_read_json_only:\n________________")
     import json
     import os, sys
     import time, datetime
@@ -126,45 +125,29 @@ def file_write_read_json_api():
     form_dict.update({"date": time.strftime('%Y-%m-%d %H:%M')})
     print("form_dict: ", form_dict)
 
-
-
-
     if "000_file_name" in form_keys_list:
-        file = "../tmp/" + form_dict.get('000_file_name') + ".json"
-        r_stream = open(file, mode='r', encoding="utf-8")
-        array_r_stream = r_stream.read()
-        array_r_stream = array_r_stream[:-2]
-        r_stream.close()
-        print("array_r_stream",array_r_stream)
-
-        file = "../tmp/" + form_dict.get('000_file_name') + "_api.json"
+        file = "../tmp/" + form_dict.get('000_file_name') + "_only.json"
         print ("\nfile: ", file)
         print ("Записываем в: ", os.environ[ "HTTP_HOST" ], file[2:], sep= '')
-        # if(form_dict.get("010_mode")== 'w'):#0 - очищаем файл
-        #     file_stream = open(file, mode='w', encoding="utf-8", errors=None)
-        #     file_stream.close()
-        file_stream = open(file, mode='w', encoding="utf-8", errors=None)
-        file_stream.write("[\n")
-
-        file_stream.write(array_r_stream)
-        sys.stdout.write(array_r_stream)
-
-        # file_stream.write(json.dumps(form_dict, ensure_ascii=False))
-        # sys.stdout.write(json.dumps(form_dict, ensure_ascii=False))
-
-        file_stream.write("]\n")
+        if(form_dict.get("010_mode")== 'w'):#0 - очищаем файл
+            file_stream = open(file, mode='w', encoding="utf-8", errors=None)
+            file_stream.close()
+        file_stream = open(file, mode='a', encoding="utf-8", errors=None)
+        file_stream.write(json.dumps(form_dict, ensure_ascii=False))
+        sys.stdout.write(json.dumps(form_dict, ensure_ascii=False))
+        file_stream.write("\n")
         file_stream.close()
 
-        # list_ip = list() #для формирования списка по одному из ключей
-        # r_stream = open(file, mode='r', encoding="utf-8")
-        # print ("\n\nПострочно считываем строки из ", os.environ[ "HTTP_HOST" ] , file[2:],  sep='')
-        # for line in r_stream.readlines():
-        #     print(line, end='')
-        #     new_dict =  json.loads(line)
-        #     print(new_dict)
-        #     list_ip.append(new_dict.get('REMOTE_ADDR'))
-        # print("Список list_ip: ",list_ip)
-        # print("len(list_ip): ",len(list_ip))
+        list_ip = list() #для формирования списка по одному из ключей
+        r_stream = open(file, mode='r', encoding="utf-8")
+        print ("\n\nПострочно считываем строки и преобразуем в словарь из ", os.environ[ "HTTP_HOST" ] , file[2:],  sep='')
+        for line in r_stream.readlines():
+            print(line, end='')
+            new_dict =  json.loads(line)
+            print(new_dict)
+            list_ip.append(new_dict.get('REMOTE_ADDR'))
+        print("Список list_ip: ",list_ip)
+        print("len(list_ip): ",len(list_ip))
 
 
 
@@ -176,7 +159,9 @@ Content-type:text/html\r\n
 ''')
 result_form = form_dictionary()#Анализируем строку запроса
 print('\nФункция вернула:\n', result_form, '\n')
-# file_write_read(result_form)
-# file_write_read_json(result_form)
-# file_write_read_json_api()
+file_write_read(result_form)
+file_write_read_json(result_form)
+file_write_read_json_only()
+
 print('\n</pre>\n</body>\n<html>')
+

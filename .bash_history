@@ -347,3 +347,82 @@ cd /var/www/g06/g06u28/public_html/010_html/050_forms/tmp/results
 cd ../
 ls 
 rm -rf results
+ls -lAF
+git pull
+ls -lAF
+ls -lAF /.ssh
+ls -lAF .ssh
+ssh-keygen -t rsa -b 4096 -C "vmarshirov@outlook.com"
+eval $(ssh-agent -s)
+ssh-add  ~/.ssh/id_rsa
+cat  ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+git pull
+ls -lAF
+git config --list
+ls -lAF
+cd ../
+su
+cd
+ls -lAF
+rm -rf *
+ls -lAF
+rm -rf .bash_history .bashrc .cache/ .git/  .htaccess 
+ls -lAF
+rm -rf .gitignore .i/ .viminfo .vimrc
+ls -lAF
+ls -lAF
+git init
+git config  user.name "vmarshirov";
+git config  user.email "vmarshirov@outlook.com";
+git remote add origin git@github.com:vmarshirov/g06u28.git;
+git pull origin main;
+git branch
+git branch -M main;
+git branch
+pwd
+vim 010_html/050_forms/index_api.html
+ls -lAF
+ls -lAF cgi-bin/
+chmod 755  cgi-bin/form_api.py
+chmod 777 tmp
+mkdir tmp
+chmod 777 tmp
+ls -lAF tmp
+vim tmp/g06u28.txt_api.json
+vim 030_js/public_html/0600_api.html
+ls -lAF tmp
+ls  030_js/public_html/
+ls  030_js/js
+ls  030_js/js/0620_api.js
+vim  030_js/js/0620_api.js
+pwd
+vim  030_js/js/0620_api.js
+git add .
+git status
+git commit -m"api"
+git push -u origin main;
+history
+ls
+ls 010_html
+ls 010_html/050_forms
+ls 010_html/050_forms/index.html
+vim 010_html/050_forms/index.html
+ls
+ls cgi-bin
+ cat > cgi-bin/form_action.py
+chmod 755 cgi-bin/form_action.py
+vim 010_html/050_forms/index.html
+ls cgi-bin
+ls cgi-bin/form_action.py
+vim cgi-bin/form_action.py
+./cgi-bin/form_action.py
+vim cgi-bin/form_action.py
+./cgi-bin/form_action.py
+vim cgi-bin/form_action.py
+./cgi-bin/form_action.py
+git add .
+git status
+git commit -m'form_action'
+git push
+exit
