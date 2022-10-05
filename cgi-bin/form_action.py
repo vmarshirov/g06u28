@@ -7,8 +7,8 @@ def form_dictionary():
     import cgi, cgitb
     cgitb.enable()
 
-    print("date:", time.strftime('%Y-%m-%d %H:%M'))
-    print("REMOTE_ADDR:", os.environ["REMOTE_ADDR"])
+    print("Ваш IP:", os.environ["REMOTE_ADDR"])
+    print("Текущие дата и время:", time.strftime('%Y-%m-%d %H:%M'))
 
     print ("\nСтрока запроса")
     form = cgi.FieldStorage()

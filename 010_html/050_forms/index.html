@@ -5,60 +5,56 @@
     <title>Формы. Отправляем данные на сервер</title>
 </head>
 
-
+<html>
 <body>
-    <h1 align="center">Формы. Отправляем данные на сервер</h1>
-    <!--
-    <form action="http://http://185.182.111.214/:7632/cgi-bin/form_action.py" method='get' target='_self'>
-    -->
-        <form action="../../cgi-bin/form_action.py" method='get' target='_self'>
-        <p>Фамилия: <input type="Text" name="last_name" value="Петров" size=20></p>
-        <p>Возраст: <input type="Number" name="age" value="0" size=20></p>
-        <p>Место проживания:
-            <input type="Radio" name="place" value="Moscow">Москва
-            <input type="Radio" name="place" value="Nizhny" checked>Нижний
-        </p>
-        
-        <p>Стаж работы:
-            <input type="Checkbox" name="experience" value="10" checked>Маркетологом - 10
-            <input type="Checkbox" name="experience" value="20" checked>Экономистом -20
-            <input type="Checkbox" name="experience" value="30" checked>Менеджером -30
-        </p>
-        
-        <p>Знание английского
-            <select name="languages">
-        <OPTION value="Владею свободно">Владею свободно</OPTION> 
-        <OPTION value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</OPTION> 
+<h3 align="center">Формы. Отправляем данные на сервер</h3>
+<!--<form action="../../cgi-bin/form_action.py" method='get' target='_self'>-->
+<form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+    <p>Фамилия: <input name="last_name" size=20 type="Text" value="Петров"></p>
+    <p>Возраст: <input name="age" size=20 type="Number" value="0"></p>
+    <p>Место проживания:
+        <input name="place" type="Radio" value="Moscow">Москва
+        <input checked name="place" type="Radio" value="Nizhny">Нижний
+    </p>
+
+    <p>Стаж работы:
+        <input checked name="experience" type="Checkbox" value="10">Маркетологом - 10
+        <input checked name="experience" type="Checkbox" value="20">Экономистом -20
+        <input checked name="experience" type="Checkbox" value="30">Менеджером -30
+    </p>
+
+    <p>Знание английского
+        <select name="languages">
+            <OPTION value="Владею свободно">Владею свободно</OPTION>
+            <OPTION value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</OPTION>
         </select>
-        </p>
-        
-        <p> Дополнительная информация:
-            <br>
-            <TEXTAREA name="textarea" rows=4 cols=80>Для заметок</TEXTAREA>
-        </p>
-        
-        <p>Дата: <input type="date" name="user_date" value='2000-01-01'></p>
-        <p>Пароль: <input type="Password" name="password" value="123" size=9></p>
-        <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
-        <p>Название файла: <input type="Техт" name="000_file_name" size='30' value="Н_ОW_Г_326510_1_Ivanov.txt"></p>
-        
-        <p>
+    </p>
+
+    <p> Дополнительная информация:
+        <br>
+        <TEXTAREA cols=80 name="textarea" rows=4>Для заметок</TEXTAREA>
+    </p>
+
+    <p>Дата: <input name="user_date" type="date" value='2000-01-01'></p>
+    <p>Пароль: <input name="password" size=9 type="Password" value="123"></p>
+    <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+    <p>Название файла: <input name="000_file_name" size='30' type="Техт" value="Н_ОW_Г_326510_1_Ivanov.txt"></p>
+
+    <p>
         Тип записи в файл:<select name="010_mode">
-        <OPTION value="a">a - дозаписать в файл</OPTION> 
-        <OPTION value="w">w - очисить файл и записать в файл</OPTION> 
-        </select>
-            <input type="hidden" name="function" value="page">
-            <input type="hidden" name="page_id" value="3">
-         </p>
-        
-        <p> 
-        <input type="Reset" name="Reset" value="Обновить">
-        <input type="Submit" name="submit" value="Отправить">
-        </p>
-    
-    </form>
-</body>
-<pre>
+        <OPTION value="a">a - дозаписать в файл</OPTION>
+        <OPTION value="w">w - очисить файл и записать в файл</OPTION>
+    </select>
+        <input name="function" type="hidden" value="page">
+        <input name="page_id" type="hidden" value="3">
+    </p>
+
+    <p>
+        <input name="Reset" type="Reset" value="Обновить">
+        <input name="submit" type="Submit" value="Отправить">
+    </p>
+
+</form>
 <pre>
 В ~/public_html/education/forms:
 
@@ -78,4 +74,5 @@
 Страница должна содержать все перечисленные примеры отправки данных,
 в качетве прототипа использовать ранее созданную таблицу с паспортом
 </pre>
+</body>
 </html>
