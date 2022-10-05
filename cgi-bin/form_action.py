@@ -10,6 +10,7 @@ def form_dictionary():
     print("Ваш IP:", os.environ["REMOTE_ADDR"])
     print("Текущие дата и время:", time.strftime('%Y-%m-%d %H:%M'))
 
+
     print ("\nСтрока запроса")
     form = cgi.FieldStorage()
     print("form: ", form)
