@@ -6,9 +6,10 @@ width: 100%;
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
     background-color: rgba(250, 220, 150, 0.781);
+    font-size: 0.9rem;
 }
 
 header {
@@ -16,8 +17,7 @@ header {
     height: 2rem;
 }
 
-h1,
-h2 {
+h1, h2 {
     text-align: center;
     margin: 0;
 }
@@ -34,7 +34,7 @@ img {
 
 section {
     background-color: brown;
-    min-height: 350px;
+    min-height: 300px;
 }
 
 /*********** flexbox CSS ************/
@@ -43,36 +43,40 @@ section {
     display: flex;
     /*главная ось*/
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: left;
     /*поперечная ось */
     align-items: flex-end;
 }
 
 article {
-    width: 300px;
+    width: 350px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 4px;
     padding: 10px;
     margin: 10px;
     background: aqua;
     /*  margin: auto; -центритуем по горизонтали и вертикали*/
 }
-article {
-/*flex-basis:50% - размер относит. родителя*/}
 
-.flex_grow_basis_shrink {
-/*
-flex-grow:1; - растяжение
-flex-shrink:1;  - сжатие 
-*/
+article {
+    /*flex-basis:50% - размер относит. родителя*/
 }
 
+
 .order_align-self {
-/*
-order:1;  - локальн. порядок
-align-self: flex-start; поперечн.локальн. выравнив
-*/
+    /*
+    order:1;  - порядок 0- высший
+    align-self: flex-start; поперечн.локальн. выравнив
+    */
+}
+
+
+.flex_grow_basis_shrink {
+    /*
+    flex-grow:1; - растяжение
+    flex-shrink:1;  - сжатие
+    */
 }
 
 /*
@@ -84,20 +88,19 @@ flex: 1 1 600px;//grow shrink basis
 flex-flow: row nowrap;
 justify-content: space-around;
 align-items: center;
-}
-*/
-
+}*/
 /*
+
 .button {
 display: flex;
 flex-direction:row-reverse;
 flex-wrap: wrap;
-justify-content:left;
+justify-content:right;
 align-items: start;
 }
-
+*/
+/*
 button{
 margin: 0.5rem;
-padding: 1.2rem
-}
-*/
+padding: 1.0rem
+}*/
