@@ -43,7 +43,7 @@ section {
     display: flex;
     /*главная ось*/
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: left;
     /*поперечная ось */
     align-items: flex-end;
@@ -60,7 +60,8 @@ article {
 }
 
 article {
-    /*flex-basis:50% - размер относит. родителя*/
+    flex-basiss:350px;
+    /*flex-basis:300px; - размер относит. родителя*/
 }
 
 
@@ -72,8 +73,11 @@ article {
 }
 
 
-.flex_grow_basis_shrink {
+.basis_grow_shrink {
+    flex-grow:0;
+    flex-shrink:0;
     /*
+    flex-basis:350px;
     flex-grow:1; - растяжение
     flex-shrink:1;  - сжатие
     */
