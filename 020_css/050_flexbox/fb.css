@@ -50,7 +50,7 @@ section {
 }
 
 article {
-    width: 350px;
+    /*width: 350px;*/
     border-style: solid;
     border-width: 4px;
     padding: 10px;
@@ -60,9 +60,9 @@ article {
 }
 
 article {
-    flex-basiss:350px;
-    /*flex-basis:300px; - размер относит. родителя*/
-}
+    /*width: 350px;*/
+    flex-basis:350px;
+    }
 
 
 .order_align-self {
