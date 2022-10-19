@@ -66,6 +66,8 @@ article {
 
 
 .order_align-self {
+    order:0;
+    align-self: flex-end
     /*
     order:1;  - порядок 0- высший
     align-self: flex-start; поперечн.локальн. выравнив
@@ -83,7 +85,7 @@ article {
     */
 }
 
-
+/*
 article:hover  {
 border-width:10px;
 border-style:solid;
@@ -93,7 +95,7 @@ flex-flow: row nowrap;
 justify-content: space-around;
 align-items: center;
 }
-
+*/
 /*
 .button {
 display: flex;
