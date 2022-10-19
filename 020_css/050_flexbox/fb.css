@@ -83,7 +83,7 @@ article {
     */
 }
 
-/*
+
 article:hover  {
 border-width:10px;
 border-style:solid;
@@ -92,9 +92,9 @@ flex: 1 1 600px;//grow shrink basis
 flex-flow: row nowrap;
 justify-content: space-around;
 align-items: center;
-}*/
-/*
+}
 
+/*
 .button {
 display: flex;
 flex-direction:row-reverse;
