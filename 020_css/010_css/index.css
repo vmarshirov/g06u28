@@ -1,9 +1,15 @@
+/*:root {font-size: 20px}*/
 * {
     border-width: 1px;
     border-style: solid;
     margin: 5px: auto;
     padding: 4px;
+    font-size: 20px;
 }
+
+.em { font-size: 1.0em}
+.rem { font-size: 1.0rem}
+.parent {font-size:30px}
 
 body {
     background-color: white;
@@ -27,11 +33,6 @@ img {
     background-color: yellow;
 }
 
-flex_card {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-}
 
 card {
     margin: 2px;

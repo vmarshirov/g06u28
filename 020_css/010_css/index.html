@@ -3,32 +3,30 @@
 
 <head>
     <title>Каскадные таблицы стилей</title>
+    <link href='./index.css' rel='stylesheet' type='text/css'>
     <!--
-    <link rel='stylesheet' type='text/css' href='txt.css'>>
--->
-    <!--
-<style>
-#Правила: селектор (выбирает тэг) {
-блок объявлений (указывает свойства и значение)
-}
+   <style>
+   #Правила: селектор (выбирает тэг) {
+   блок объявлений (указывает свойства и значение)
+   }
 
-p{
-color: blue
-}
+   p{
+   color: blue
+   }
 
-.note {
-color: green
-}
+   .note {
+   color: green
+   }
 
-#news {
-color: blue
-}
+   #news {
+   color: blue
+   }
 
-p font:first-child {
-color: red
-}
-</style>
--->
+   p font:first-child {
+   color: red
+   }
+   </style>
+   -->
 </head>
 
 <body>
@@ -38,45 +36,42 @@ color: red
 Стиль текста для body
 
 <p>Стиль текста для абзаца ( из внешней или глобальной таблицы)</p>
-<p style="color:red; ">Встроенный стиль для абзаца</p>
-<p style="font-size:0.75em; text-align:center; line-height:3.5em ">Еще один пример встроенного стиля </p>
+<p style="color:red; border-color: green ">Встроенный стиль для узла</p>
+<p style=" text-align:center; line-height:80px ">text-align:center; line-height:80px </p>
 
-<p>
-    <font style="font-size: 0.7em; text-decoration: underline; letter-spacing:0.01em; word-spacing: 2em">Примеры
-        возможностей стилей</font>
-    <br>
-    <font style="color:blue">возможностей стилей</font>
-    <font style="font-style:italic; background-color:gray; font-weight:bolder;">для</font>
-    представления
-    <font style="vertical-align:super">vertical-align:super</font>
-    <font style="background-color:white">и</font>
-    <font style="vertical-align:sub">vertical-align:sub</font>
+<p style="text-decoration:none; letter-spacing:1.0rem; word-spacing:2.0rem">Примеры возможностей стилей.
+    <br><span style="border-color:blue"> и еще возможности стилей</span>
+    <br> И еще представления
+    <span style="vertical-align:super">vertical-align:super</span>
+    и
+    <span style="vertical-align:sub">vertical-align:sub</span>
     абзаца
 </p>
-<p style="font-family: sans-serif">Семейство шрифтов font-family: sans-serif</p>
 
 <p>Это стиль для абзаца (из внешней или глобальной таблицы).</p>
 
-<flex_card>
-    <card><img src="1.png" style="height:30px"></card>
-    <card>Свойства изображения заданы внутренним стилем</card>
-    <card><img src="1.png"></card>
-    <card>Свойства изображения заданы внешним стилем.</card>
-</flex_card>
 
 <p class="note">Назначен класс ".note"</p>
 <p id="news">Назначен идентификтор "#news"</p>
-<p>
-    <font>1</font>
-    <font>2</font>
-    <font>3</font>
-</p>
+
+<div>
+    <p class="rem">rem</p>
+    <p class="em">em</p>
+</div>
+<div class="parent">
+    <p class="rem">rem - from root(* или :root)</p>
+    <p class="em">em - from parent</p>
+</div>
 
 <ul>
     <li><a href="./index.html">./index.html</a></li>
     <li><a href="./index.html">./index.html</a></li>
     <li><a class='active' href="./index.html">./index.html</a></li>
 </ul>
+
+<div>
+
+</div>
 
 
 </body>
