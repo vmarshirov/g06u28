@@ -5,19 +5,19 @@ async function getResponce() {
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
     let responce = await fetch("../../tmp/g06u28.shop.json")
 
-/*
+    /*
 
-    if (response.ok) { // if HTTP-status is 200-299
-                       // get the response body (the method explained below)
-        let content = await response.json();
-    } else {
-        alert("HTTP-Error: " + response.status);
-    }
-*/
+        if (response.ok) { // if HTTP-status is 200-299
+                           // get the response body (the method explained below)
+            let content = await response.json();
+        } else {
+            alert("HTTP-Error: " + response.status);
+        }
+    */
 
 
-        // let content = await responce.text()
-        // console.log(JSON.parse(content))
+    // let content = await responce.text()
+    // console.log(JSON.parse(content))
 
     let content = await responce.json()
     content = content.splice(0, 4)
@@ -38,9 +38,13 @@ async function getResponce() {
         ul_0.innerHTML += ` 
         <li class="m-3 list-group-item"> 
         <img src=${content[key].img} width="200px">
-        <h3>${content[key].title}</h3>
-        <p>${content[key].description}</p>
-        <p>${content[key].price}</p>
+        <h5>${content[key].title}</h5>
+        <p>${content[key].description}. Цена 
+        ${content[key].price} р.</p>
+        <p>Заказать 
+        <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
+        <input type="number" name="amount" value="0" size="2">
+        </p> 
         </li>
                 `
     }

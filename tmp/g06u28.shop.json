@@ -2,6 +2,7 @@
   {
     "id": "1",
     "title": "Товар 1",
+    "vendor_code": "111",
     "description": "Описание 1",
     "price": 100,
     "img": "../../images/uso_001.jpg"
@@ -9,6 +10,7 @@
   {
     "id": "2",
     "title": "Товар 2",
+    "vendor_code": "222",
     "description": "Описание 2",
     "price": 200,
     "img": "../../images/uso_002.jpg"
@@ -16,15 +18,17 @@
   {
     "id": "3",
     "title": "Товар 3",
+    "vendor_code": "333",
     "description": "Описание 3",
     "price": 300,
-    "img": "https://via.placeholder.com/600/f66b97"
+    "img": "https://raw.githubusercontent.com/vmarshirov/g06u28/main/images/uso_003.jpg"
   },
   {
     "id": "4",
     "title": "Товар 4",
+    "vendor_code": "444e",
     "description": "Описание 4",
     "price": 400,
-    "img": "https://via.placeholder.com/600/f66b97"
+    "img": "https://raw.githubusercontent.com/vmarshirov/g06u28/main/images/uso_003.jpg"
   }
 ]
