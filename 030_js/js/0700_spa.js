@@ -21,11 +21,10 @@ async function getResponce() {
     }
 
 
+    // let id_main = document.getElementById("main")
 
 
-
-
-    let ul_0 = document.getElementsByTagName("ul")[0]
+    let ul_0 = document.getElementById("ul_0")
     for (key in content) {
         ul_0.innerHTML += ` 
         <li class="m-3 list-group-item"> 
@@ -40,8 +39,35 @@ async function getResponce() {
         </li>
                 `
     }
-
-
 }
 
 getResponce()
+
+function hidden() {
+    const hidden_node = document.getElementsByClassName("hidden_node")
+    for (let index = 0; index < hidden_node.length; index++) {
+        console.log("index: ", index)
+        hidden_node[index].style = "display: none"
+// hidden_node[index].hidden="thrue"
+    }
+}
+hidden()
+
+
+
+const main = document.getElementById("main")
+function style_main() {
+    hidden()
+    console.log("main.style:", id_main.style)
+    main.style = "display: flex;"
+}
+document.getElementById("id_main").addEventListener("click", style_main)
+
+const shop = document.getElementById("shop")
+function style_shop() {
+    hidden()
+    shop.style = "display: flex;"
+}
+document.getElementById("id_shop").addEventListener("click", style_shop)
+
+
