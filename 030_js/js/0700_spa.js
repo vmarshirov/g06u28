@@ -1,17 +1,33 @@
 // https://www.youtube.com/watch?v=QSF8JXFPR18&list=PLiOhsP3M5j5wIUlXkYMuWTVR8inofxLS0&index=7
-async function getResponce() {
+
+async function getComponent_01() {
+    let responce = await fetch("../../tmp/g06u28.component_01.html")
+    let content = await responce.text()
+    console.log(content)
+    let component = document.getElementById("component")
+    component.innerHTML = content
+    }
+
+function styleComponent_01() {
+    nav_clear()
+    id_nav.style = "color: red;"
+    getComponent_01()
+}
+const id_nav = document.getElementById("id_component_01")
+id_nav.addEventListener("click", styleComponent_01)
+
+
+
+async function getResponce_02() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
     let responce = await fetch("../../tmp/g06u28.shop.json")
-
     let content = await responce.text()
     console.log(content)
     content = JSON.parse(content)
-
     // content = await responce.json()
     content = content.splice(0, 4)
-
     console.log(content)
 
     let key
@@ -19,11 +35,7 @@ async function getResponce() {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
-
-
     // let id_main = document.getElementById("main")
-
-
     let ul_0 = document.getElementById("ul_0")
     for (key in content) {
         ul_0.innerHTML += ` 
@@ -37,11 +49,39 @@ async function getResponce() {
         <input type="number" name="amount" value="0" size="2">
         </p> 
         </li>
-                `
+           `
     }
 }
+async function getComponent_02() {
+    let responce = await fetch("../../tmp/g06u28.component_02.html")
+    let content = await responce.text()
+    console.log(content)
+    let component = document.getElementById("component")
+    component.innerHTML = content
+    getResponce_02()
+}
+function styleComponent_02() {
+    const id_shop = document.getElementById("id_shop")
+    nav_clear()
+    id_shop.style = "color: red;"
+    getComponent_02()
+}
+id_shop.addEventListener("click", styleComponent_02)
 
-getResponce()
+
+function nav_clear() {
+    const clear_nav = document.getElementsByClassName("nav-link")
+    for (let index = 0; index < clear_nav.length; index++) {
+        console.log("index: ", index)
+        clear_nav[index].style = "color: green;"
+    }
+}
+//nav_clear()
+
+
+
+
+/*
 
 function content_hidden() {
     const hidden_node = document.getElementsByClassName("hidden_node")
@@ -51,16 +91,11 @@ function content_hidden() {
     }
 }
 content_hidden()
+*/
 
-function nav_clear() {
-    const clear_nav = document.getElementsByClassName("nav-link")
-    for (let index = 0; index < clear_nav.length; index++) {
-        console.log("index: ", index)
-        clear_nav[index].style = "color: green;"
-    }
-}
-nav_clear()
 
+
+/*
 
 const id_main = document.getElementById("id_main")
 const main = document.getElementById("main")
@@ -71,19 +106,20 @@ function style_main() {
     main.style = "display: flex; "
 }
 id_main.addEventListener("click", style_main)
+*/
 
+/*
 
-const id_shop = document.getElementById("id_shop")
-const shop = document.getElementById("shop")
-function style_shop() {
+const id_component_01 = document.getElementById("id_component_01")
+const component_01 = document.getElementById("component")
+function style_component() {
     content_hidden()
     nav_clear()
-    id_shop.style = "color: red;"
-    shop.style = "display: flex; "
+    id_component_01.style = "color: red;"
+    component_01.style = "display: initial;"
+    getComponent_01()
 }
-id_shop.addEventListener("click", style_shop)
 
+id_component_01.addEventListener("click", style_component)
 
-
-
-
+*/
