@@ -43,31 +43,47 @@ async function getResponce() {
 
 getResponce()
 
-function hidden() {
+function content_hidden() {
     const hidden_node = document.getElementsByClassName("hidden_node")
     for (let index = 0; index < hidden_node.length; index++) {
         console.log("index: ", index)
-        hidden_node[index].style = "display: none"
-// hidden_node[index].hidden="thrue"
+        hidden_node[index].style = "display: none;"
     }
 }
-hidden()
+content_hidden()
+
+function nav_clear() {
+    const clear_nav = document.getElementsByClassName("nav-link")
+    for (let index = 0; index < clear_nav.length; index++) {
+        console.log("index: ", index)
+        clear_nav[index].style = "color: green;"
+    }
+}
+nav_clear()
 
 
-
+const id_main = document.getElementById("id_main")
 const main = document.getElementById("main")
 function style_main() {
-    hidden()
-    console.log("main.style:", id_main.style)
-    main.style = "display: flex;"
+    content_hidden()
+    nav_clear()
+    id_main.style = "color: red;"
+    main.style = "display: flex; "
 }
-document.getElementById("id_main").addEventListener("click", style_main)
+id_main.addEventListener("click", style_main)
 
+
+const id_shop = document.getElementById("id_shop")
 const shop = document.getElementById("shop")
 function style_shop() {
-    hidden()
-    shop.style = "display: flex;"
+    content_hidden()
+    nav_clear()
+    id_shop.style = "color: red;"
+    shop.style = "display: flex; "
 }
-document.getElementById("id_shop").addEventListener("click", style_shop)
+id_shop.addEventListener("click", style_shop)
+
+
+
 
 
