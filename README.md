@@ -38,5 +38,5 @@ http://185.182.111.214:7600/cgi-bin/login_ip.sh - дозаписать студ�
 
 
 ## Требования к сайту
-#### https://vmarshirov.github.io/g06u28/
+### https://vmarshirov.github.io/g06u28/
 
