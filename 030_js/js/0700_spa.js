@@ -18,7 +18,7 @@ id_nav.addEventListener("click", styleComponent_01)
 
 
 
-async function getResponce_02() {
+async function getJson() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
@@ -35,18 +35,17 @@ async function getResponce_02() {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
-    // let id_main = document.getElementById("main")
     let ul_0 = document.getElementById("ul_0")
     for (key in content) {
         ul_0.innerHTML += ` 
-        <li class="m-3 list-group-item"> 
-        <img src=${content[key].img} width="200px">
-        <h5>${content[key].title}</h5>
+        <li class="m-2 list-group-item"> 
+        <img src=${content[key].img} width="150px">
+        <h6>${content[key].title}</h6>
         <p>${content[key].description}. Цена 
         ${content[key].price} р.</p>
         <p>Заказать 
         <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
-        <input type="number" name="amount" value="0" size="2">
+        <input type="number" name="amount" value="0" style="width: 2.0rem;">
         </p> 
         </li>
            `
@@ -58,15 +57,15 @@ async function getComponent_02() {
     console.log(content)
     let component = document.getElementById("component")
     component.innerHTML = content
-    getResponce_02()
+    getJson()
 }
 function styleComponent_02() {
-    const id_shop = document.getElementById("id_shop")
+    const id_component_02 = document.getElementById("id_component_02")
     nav_clear()
-    id_shop.style = "color: red;"
+    id_component_02.style = "color: red;"
     getComponent_02()
 }
-id_shop.addEventListener("click", styleComponent_02)
+id_component_02.addEventListener("click", styleComponent_02)
 
 
 function nav_clear() {
