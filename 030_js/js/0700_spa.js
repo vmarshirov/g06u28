@@ -39,7 +39,7 @@ async function getJson() {
     for (key in content) {
         ul_0.innerHTML += ` 
         <li class="m-2 list-group-item"> 
-        <img src=${content[key].img} width="150px">
+        <img src=${content[key].img} width="200px">
         <h6>${content[key].title}</h6>
         <p>${content[key].description}. Цена 
         ${content[key].price} р.</p>
