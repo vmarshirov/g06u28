@@ -1,12 +1,18 @@
-// https://www.youtube.com/watch?v=QSF8JXFPR18&list=PLiOhsP3M5j5wIUlXkYMuWTVR8inofxLS0&index=7
+// https://learn.javascript.ru/fetch
+// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+// https://jsonplaceholder.typicode.com/
+
+
+
 
 async function getComponent_01() {
     let responce = await fetch("../../tmp/g06u28.component_01.html")
+    console.log(responce)
     let content = await responce.text()
     console.log(content)
     let component = document.getElementById("component")
     component.innerHTML = content
-    }
+}
 
 function styleComponent_01() {
     nav_clear()
