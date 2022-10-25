@@ -1,8 +1,14 @@
 # Начальная страница дисциплины "Основы web-технологий"
 
-## Страницы с полезной информацией 
-#### https://vmarshirov.github.io/index
+### Файлы (списки и оценки): https://disk.yandex.ru/d/Q4ZSaFSA9LhoFA
 
+### Видео: https://disk.yandex.ru/d/VsDvkuhcxmcPrA
+
+### Семинары Шадриной Е.В.: https://github.com/evshadrina/
+
+### Семинары Осиповой А.И.: https://github.com/OsipovaA/OsipovaA
+
+### Страницы с полезной информацией: https://vmarshirov.github.io/index
 
 
 ## ТЕСТИРОВАНИЕ
