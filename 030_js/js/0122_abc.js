@@ -4,6 +4,8 @@ function verify() {
     b = parseInt(document.getElementsByTagName("input")[2].value);
     c = parseInt(document.getElementsByTagName("input")[3].value);
 
+    console.log(a,b,c)
+
     if (a < b) {
         low = a;
         high = b;
