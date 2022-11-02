@@ -1,11 +1,14 @@
 function light(sw) {
-    var pic;
+    console.log("sw:", sw)
+    var picture;
     if (sw == 0) {
-        pic = "pic_bulboff.gif"
+        picture = "pic_bulboff.gif"
     } else {
-        pic = "pic_bulbon.gif"
+        picture = "pic_bulbon.gif"
     }
-    document.getElementById('myImage').src = pic;
+    const image = document.getElementById('idImage')
+    image.src = picture;
+    image.style = "border-style: solid;  padding: 25px;"
 }
 
 /* 
