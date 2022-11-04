@@ -3,5 +3,10 @@ AddDefaultCharset utf-8
 #AddDefaultCharset windows-1251
 SetEnv PYTHONIOENCODING utf-8
 Options +Indexes
-DirectoryIndex index.php
-
+DirectoryIndex index.html
+AuthUserFile /var/www/g06/g06u00/etc/.htpasswd
+AuthType Basic
+AuthName "notroot"
+Require valid-user
+#htpasswd -c .htpasswd notroot
+#/var/www/etc/.htpasswd
