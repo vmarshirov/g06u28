@@ -5,8 +5,6 @@ https://vmarshirov.github.io/g06u28/030_js/public_html/0120_abx.html
 
 https://vmarshirov.github.io/g06u28/030_js/public_html/0122_abc.html
 
-https://vmarshirov.github.io/g06u28/030_js/public_html/0122_abc.html
-
 https://vmarshirov.github.io/g06u28/030_js/public_html/0600_api.html
 
 https://vmarshirov.github.io/g06u28/030_js/public_html/0700_spa.html
