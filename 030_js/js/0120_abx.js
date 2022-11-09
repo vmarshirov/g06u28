@@ -15,15 +15,15 @@ function checkFields(form) {
         var low = aFloat
         var high = bFloat
     } else {
-        var low = aFloat
-        var high = bFloat
+        var low = bFloat
+        var high = aFloat
     }
     console.log(low)
     console.log(high)
     console.log(xFloat)
 
 
-    if (aFloat <= xFloat && xFloat <= bFloat) {
+    if (low <= xFloat && xFloat <= high) {
         var result = "X принадлежит заданному промежутку"
         var check = true
     } else {
