@@ -3,8 +3,7 @@
 // https://jsonplaceholder.typicode.com/
 
 
-
-
+// id_component_01
 async function getComponent_01() {
     let responce = await fetch("../../tmp/g06u28.component_01.html")
     console.log(responce)
@@ -24,6 +23,7 @@ id_nav.addEventListener("click", styleComponent_01)
 
 
 
+// id_component_02
 async function getJson() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
@@ -57,6 +57,7 @@ async function getJson() {
            `
     }
 }
+
 async function getComponent_02() {
     let responce = await fetch("../../tmp/g06u28.component_02.html")
     let content = await responce.text()
@@ -65,6 +66,7 @@ async function getComponent_02() {
     component.innerHTML = content
     getJson()
 }
+
 function styleComponent_02() {
     const id_component_02 = document.getElementById("id_component_02")
     nav_clear()
@@ -72,6 +74,7 @@ function styleComponent_02() {
     getComponent_02()
 }
 id_component_02.addEventListener("click", styleComponent_02)
+
 
 
 function nav_clear() {

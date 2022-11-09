@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=QSF8JXFPR18&list=PLiOhsP3M5j5wIUlXkYMuWTVR8inofxLS0&index=7
 async function getResponce() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
@@ -19,10 +18,6 @@ async function getResponce() {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
-
-
-
-
 
 
     let ul_0 = document.getElementsByTagName("ul")[0]
