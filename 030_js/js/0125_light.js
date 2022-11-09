@@ -1,6 +1,6 @@
 function light(sw) {
     console.log("sw:", sw)
-    var picture;
+    var picture
     if (sw == 0) {
         picture = "pic_bulboff.gif"
     } else {
@@ -12,17 +12,10 @@ function light(sw) {
 }
 
 /* 
-
-
 console.log(document.all)
-
 document.all[6].getAttribute('src')
-
 document.all[6].src="http://g06u28.nn2000.info/public_html/025_js/public_html/pic_bulbon.gif";
-
 document.all[6].src="http://g06u28.nn2000.info/public_html/025_js/public_html/pic_bulboff.gif";
-
 document.getElementById("myImage")
 var node = document.getElementById("myImage");
-
 */
