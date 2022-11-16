@@ -1,11 +1,10 @@
-
 function verify() {
-    a = parseInt(document.getElementsByTagName("input")[1].value);
-    b = parseInt(document.getElementsByTagName("input")[2].value);
-    c = parseInt(document.getElementsByTagName("input")[3].value);
+    let a = parseInt(document.getElementsByTagName("input")[1].value);
+    let b = parseInt(document.getElementsByTagName("input")[2].value);
+    let c = parseInt(document.getElementsByTagName("input")[3].value);
+    console.log(a, b, c)
 
-    console.log(a,b,c)
-
+    let low, high
     if (a < b) {
         low = a;
         high = b;
@@ -31,17 +30,19 @@ function send() {
         document.getElementsByName('formulation')[0].value = textCondition;
         document.getElementsByName('result')[0].value = result;
         document.getElementById("UserEnter").submit();
-    } else { alert("есть недостатки, повторите ввод")}
+    } else {
+        alert("есть недостатки, повторите ввод")
+    }
 }
 
-function verify_send(){
+function verify_send() {
     verify();
     send();
 }
 
-var messageText = document.getElementById("result").innerText
-var result;
-var check = true;
+let messageText = document.getElementById("result").innerText
+let result;
+let check = true;
 
 /*
 const constVerify = document.getElementById("verify");
@@ -49,9 +50,9 @@ constVerify.addEventListener('click',verify)
 */
 
 const constVerify = document.getElementById("c");
-constVerify.addEventListener('keyup',verify)
+constVerify.addEventListener('keyup', verify)
 
 const constSend = document.getElementById("send");
-constSend.addEventListener('click',send)
+constSend.addEventListener('click', send)
 
 
