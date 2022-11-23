@@ -68,8 +68,8 @@ async function getComponent_02() {
 }
 
 function styleComponent_02() {
-    const id_component_02 = document.getElementById("id_component_02")
     nav_clear()
+    const id_component_02 = document.getElementById("id_component_02")
     id_component_02.style = "color: red;"
     getComponent_02()
 }
@@ -84,50 +84,3 @@ function nav_clear() {
         clear_nav[index].style = "color: green;"
     }
 }
-//nav_clear()
-
-
-
-
-/*
-
-function content_hidden() {
-    const hidden_node = document.getElementsByClassName("hidden_node")
-    for (let index = 0; index < hidden_node.length; index++) {
-        console.log("index: ", index)
-        hidden_node[index].style = "display: none;"
-    }
-}
-content_hidden()
-*/
-
-
-
-/*
-
-const id_main = document.getElementById("id_main")
-const main = document.getElementById("main")
-function style_main() {
-    content_hidden()
-    nav_clear()
-    id_main.style = "color: red;"
-    main.style = "display: flex; "
-}
-id_main.addEventListener("click", style_main)
-*/
-
-/*
-
-const id_component_01 = document.getElementById("id_component_01")
-const component_01 = document.getElementById("component")
-function style_component() {
-    content_hidden()
-    nav_clear()
-    id_component_01.style = "color: red;"
-    component_01.style = "display: initial;"
-    getComponent_01()
-}
-
-id_component_01.addEventListener("click", style_component)
-
-*/
