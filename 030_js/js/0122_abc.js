@@ -31,7 +31,7 @@ function send() {
         document.getElementsByName('result')[0].value = result;
         document.getElementById("UserEnter").submit();
     } else {
-        alert("есть недостатки, повторите ввод")
+        alert("Есть недостатки. Повторите ввод")
     }
 }
 
@@ -42,17 +42,16 @@ function verify_send() {
 
 let messageText = document.getElementById("result").innerText
 let result;
-let check = true;
+let check = false;
 
-/*
-const constVerify = document.getElementById("verify");
-constVerify.addEventListener('click',verify)
-*/
+const elementA = document.getElementById("a");
+elementA.addEventListener('keyup', verify);
+const elementB = document.getElementById("b");
+elementB.addEventListener('keyup', verify);
+const elementC = document.getElementById("c");
+elementC.addEventListener('keyup', verify);
 
-const constVerify = document.getElementById("c");
-constVerify.addEventListener('keyup', verify)
-
-const constSend = document.getElementById("send");
-constSend.addEventListener('click', send)
+const elementSend = document.getElementById("send");
+elementSend.addEventListener('click', send)
 
 
