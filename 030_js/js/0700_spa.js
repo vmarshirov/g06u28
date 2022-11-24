@@ -2,9 +2,16 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 // https://jsonplaceholder.typicode.com/
 
+function nav_clear() {
+    const clear_nav = document.getElementsByClassName("nav-link")
+    for (let index = 0; index < clear_nav.length; index++) {
+        console.log("index: ", index)
+        clear_nav[index].style = "color: green;"
+    }
+}
 
-// id_component_01
-async function getComponent_01() {
+// component_01
+async function fetchHTML_01() {
     let responce = await fetch("../../tmp/g06u28.component_01.html")
     console.log(responce)
     let content = await responce.text()
@@ -13,18 +20,28 @@ async function getComponent_01() {
     component.innerHTML = content
 }
 
-function styleComponent_01() {
+function navComponent_01() {
     nav_clear()
-    id_nav.style = "color: red;"
-    getComponent_01()
+    nav_01.style = "color: red;"
 }
-const id_nav = document.getElementById("id_component_01")
-id_nav.addEventListener("click", styleComponent_01)
+
+function Component_01() {
+    fetchHTML_01()
+    navComponent_01()
+}
 
 
+// component_02
+async function fetchHTML_02() {
+    let responce = await fetch("../../tmp/g06u28.component_02.html")
+    let content = await responce.text()
+    console.log(content)
+    let component = document.getElementById("component")
+    component.innerHTML = content
 
-// id_component_02
-async function getJson() {
+}
+
+async function fetchJson_02() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
@@ -35,9 +52,7 @@ async function getJson() {
     // content = await responce.json()
     content = content.splice(0, 4)
     console.log(content)
-
-    let key
-    for (key in content) {
+    for (let key in content) {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
@@ -58,29 +73,18 @@ async function getJson() {
     }
 }
 
-async function getComponent_02() {
-    let responce = await fetch("../../tmp/g06u28.component_02.html")
-    let content = await responce.text()
-    console.log(content)
-    let component = document.getElementById("component")
-    component.innerHTML = content
-    getJson()
-}
-
-function styleComponent_02() {
+function navComponent_02() {
     nav_clear()
-    const id_component_02 = document.getElementById("id_component_02")
-    id_component_02.style = "color: red;"
-    getComponent_02()
+    nav_02.style = "color: red;"
 }
-id_component_02.addEventListener("click", styleComponent_02)
 
-
-
-function nav_clear() {
-    const clear_nav = document.getElementsByClassName("nav-link")
-    for (let index = 0; index < clear_nav.length; index++) {
-        console.log("index: ", index)
-        clear_nav[index].style = "color: green;"
-    }
+function Component_02() {
+    fetchHTML_02()
+    fetchJson_02()
+    navComponent_02()
 }
+
+const nav_01 = document.getElementById("id_nav_01")
+nav_01.addEventListener("click", Component_01)
+const nav_02 = document.getElementById("id_nav_02")
+nav_02.addEventListener("click", Component_02)
