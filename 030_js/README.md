@@ -15,6 +15,9 @@ https://vmarshirov.github.io/g06u28/030_js/public_html/0700_spa.html
 
 ### Полезности
 
+
+https://doka.guide/js/
+
 https://learn.javascript.ru/
 
 https://www.javascript.com/
