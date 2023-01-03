@@ -42,3 +42,5 @@ const answer = function() {
 }
 answer()
 // 42!
+
+alert(`const ${a}`)
