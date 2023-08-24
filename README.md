@@ -1,21 +1,21 @@
-# Начальная страница дисциплины "Основы web-технологий"
+### Начальная страница дисциплины "Основы web-технологий"
 
-### Ссылка на текущие лекции, семинары, экзамены и пересдачи (Марширов): https://telemost.yandex.ru/j/20082269713992
+#### Ссылка на текущие лекции, семинары, экзамены и пересдачи (Марширов): https://telemost.yandex.ru/j/20082269713992
 Ссылка меняется при каждом новом сеансе и при разрыве связи. Для надежного обновления страницы: CTRL+F5
 
 Phone, Viber, WhatsApp +79081605316  - если возникают срочная  необходимость
+<!---
+#### Семинары Шадриной Е.В.: https://github.com/evshadrina/
 
-### Семинары Шадриной Е.В.: https://github.com/evshadrina/
-
-### Семинары Осиповой А.И.: https://github.com/OsipovaA/OsipovaA
+#### Семинары Осиповой А.И.: https://github.com/OsipovaA/OsipovaA
 
 
-### Файлы (списки и оценки): https://disk.yandex.ru/d/Q4ZSaFSA9LhoFA
+#### Файлы (списки и оценки): https://disk.yandex.ru/d/Q4ZSaFSA9LhoFA
 
-### Видео: https://disk.yandex.ru/d/VsDvkuhcxmcPrA
+#### Видео: https://disk.yandex.ru/d/VsDvkuhcxmcPrA
 
-### Страницы с полезной информацией: https://vmarshirov.github.io/index
-
+####Страницы с полезной информацией: https://vmarshirov.github.io/index
+-->
 <!--
 ## ТЕСТИРОВАНИЕ
 ### Студентам:
