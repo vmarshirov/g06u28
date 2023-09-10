@@ -1,5 +1,5 @@
 git pull
 git status
 git add .
-git commit -me''
+git commit -m'e'
 git push
