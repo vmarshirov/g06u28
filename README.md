@@ -27,7 +27,7 @@ https://telemost.yandex.ru/j/60999721480174
 
 ##### Ссылка меняется при каждом новом сеансе и при разрыве связи. Для надежного обновления страницы: CTRL+F5
 #### Рабочая ведомость (worksheets), видео, сжатые архивы и др. размещены на: https://disk.yandex.ru/d/i2UnklcmbY_12A
-#### Требовани к контрольной работе 1 в: https://vmarshirov.github.io/g06u28/requirements_html.html
+#### Требования к контрольной работе 1 в: https://vmarshirov.github.io/g06u28/requirements_html.html
 Если возникают срочная  необходимость: vmarshirov@hse.ru; телефон +79081605316   
 
 <!---
