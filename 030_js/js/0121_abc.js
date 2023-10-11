@@ -50,7 +50,7 @@ let result;
 let check = false;
 
 const elementA = document.getElementById("a");
-elementA.addEventListener('keyup', verify);
+elementA.addEventListener('input', verify);
 
 const elementB = document.getElementById("b");
 elementB.addEventListener('keyup', verify);
