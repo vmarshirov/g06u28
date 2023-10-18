@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Каскадные таблицы стилей</title>
+    <!--Внешняя таблица стилей
+<link rel='stylesheet' type='text/css' href='txt.css'>
+-->
+
+    <style>
+        .d_00 {
+            vertical-align: top;
+            margin: 30px;
+            width: 1024px;
+            height: 350px;
+            background: green;
+            padding: 5px;
+            padding-right: 50px;
+            border: solid 1px black;
+            text-align: center;
+        }
+        
+        .d_13 {
+            width: 150px;
+            background: #fc0;
+            padding: 5px;
+            border: solid 1px black;
+            float: left;
+            position: relative;
+            top: 50px;
+            left: 0px;
+        }
+        
+        .d_15 {
+            width: 200px;
+            background: #fc0;
+            padding: 5px;
+            border: solid 1px black;
+            float: left;
+            position: relative;
+            top: 70px;
+            left: -10px;
+        }
+        
+        .d_17 {
+            width: 150px;
+            background-image: url(1.png);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            padding: 5px;
+            border: solid 1px black;
+            float: left;
+            position: relative;
+            top: 80px;
+            left: -11px;
+        }
+        
+        .d_19 {
+            width: 400px;
+            background: #fc0;
+            padding: 5px;
+            border: solid 1px black;
+            float: left;
+            position: relative;
+            top: 50px;
+            left: -12px;
+            border-radius: 18px;
+        }
+        
+        .d_19_01 {
+            margin-right: 15px;
+            border: solid 2px red;
+            width: 200px;
+            height: 200px;
+            padding: 1px;
+            float: right;
+            vertical-align: top;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d_00">
+        <p>00_Примеры позиционирования и создания представлений с использованием блоков и таблиц</p>
+
+        <div class="d_13">
+            13_Примеры позиционирования и создания представлений с использованием блоков и таблиц
+        </div>
+
+        <div class="d_15">
+            15_Примеры позиционирования и создания представлений с использованием блоков и таблиц
+        </div>
+
+
+        <div class="d_17">
+            17_Примеры позиционирования и создания представлений с использованием блоков и таблиц
+        </div>
+
+        <div class="d_19">
+            19_Примеры позиционирования и создания представлений с использованием блоков и таблиц
+
+            <div class="d_19_01">
+                <img src="1.png" style="height: 60px;"> <br>19_01_Примеры позиционирования и создания представлений с использованием блоков и таблиц "
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div style="
+position: relative; 
+top: 20px; 
+left: 0px; 
+width: 1024px;
+border: solid 1px red; 
+">
+
+        <div style="
+width: 1024px;
+high: 30;
+text-align:center;
+">
+            Заголовок
+        </div>
+
+
+        <div style="
+  width: 1024px;
+  text-align:left;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+">
+            <div style="
+       float: left; 
+      border-right: 1px solid red;
+      width: 150px ;
+      ">
+                Навигация
+            </div>
+
+            <div style="
+      ">
+                Содержание
+            </div>
+        </div>
+
+        <div style="
+  width: 1024px;
+  text-align:left;
+">
+            Подвал
+        </div>
+    </div>
+
+</body>
+
+</html>

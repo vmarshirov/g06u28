@@ -1,6 +1,6 @@
 /*:root {font-size: 20px}*/
 * {
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     margin: 5px: auto;
     padding: 4px;
@@ -24,18 +24,6 @@ body {
 p {
     background: silver;
 }
-
-p[title="Подсказка"]{
-    color:darkred
-}
-p::first-line {
-    background: red;
-}
-p:first-child {
-    background: green;
-}
-
-
 
 img {
     margin: 10px;
