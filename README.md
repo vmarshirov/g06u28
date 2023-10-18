@@ -2,8 +2,34 @@
 
 #### Ссылка на текущие лекции, семинары, экзамены и пересдачи (Марширов): 
 
+<pre>
+  Замечено, что некоторые студенты могут защитить контрольную работу 1 досрочно (18 октября)  и поэтому  я заранее записал и загрузил лекцию на 18 октября.
+Соответственно 18 октября лекция отменяется
+
+Видео содержит:
+Пример решения задачи по п.
+С. 2 балла. Создание страницы с формой для описания, решения (используя JavaScript) оригинальной алгоритмической задачи. 
+На удаленный сервер отправлять условие, исходные данные и результаты решения.
+Видео в  https://disk.yandex.ru/i/NkZFwshkDVlcjA
+Обновленный код и представление на: 
+https://github.com/vmarshirov/2023_Basics_of_Web_Tecnologies/tree/main/JS_DOM
+https://github.com/vmarshirov/2023_Basics_of_Web_Tecnologies/blob/main/JS_DOM/form_abc.html
+https://vmarshirov.github.io/2023_Basics_of_Web_Tecnologies/JS_DOM/form_abc.html
+
+Пример решения задачи по 
+В.3. Создать страницу для решения алгоритмической задачи. Название страницы "Решение алгоритмической задачи"
+Видео в : https://disk.yandex.ru/i/-pkiDnZckPMD7Q
+Обновленный код и представление на: 
+https://github.com/vmarshirov/2023_Basics_of_Web_Tecnologies/tree/main/JS_DOM
+https://github.com/vmarshirov/2023_Basics_of_Web_Tecnologies/blob/main/JS_DOM/step_abc.html
+https://vmarshirov.github.io/2023_Basics_of_Web_Tecnologies/JS_DOM/step_abc.html
+По сравнению с рассмотренным ранее примером реализации этой задачи,  
+здесь используются объекты и получается более прозрачным и читаемым код
+</pre>
+
+
 ##### Для участников (семинары, ограничение на 40 участников):
-https://telemost.yandex.ru/j/78819207884965
+
 
 ##### Для зрителей (лекции, ограничение - 10000 зрителей, писать в чат и на электронку vmarshirov@hse.ru): 
 
