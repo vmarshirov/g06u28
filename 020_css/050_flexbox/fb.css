@@ -1,3 +1,4 @@
+
 body {
     /*    
 max-width: max-content;
@@ -9,7 +10,7 @@ width: 100%;
     padding-right: 10px;
     padding-left: 10px;
     background-color: rgba(250, 220, 150, 0.781);
-    font-size: 0.9rem;
+    font-size:14px;
 }
 
 header {
@@ -30,6 +31,7 @@ img {
     margin: 1rem;
     padding: 0rem;
     background-color: black;
+    font:
 }
 
 section {
@@ -56,7 +58,7 @@ article {
     padding: 10px;
     margin: 10px;
     background: aqua;
-    /*  margin: auto; -центритуем по горизонтали и вертикали*/
+    /*  margin: auto; -центрируем по горизонтали и вертикали*/
 }
 
 article {
@@ -85,17 +87,9 @@ article {
     */
 }
 
-/*
-article:hover  {
-border-width:10px;
-border-style:solid;
-display: flex;
-flex: 1 1 600px;//grow shrink basis
-flex-flow: row nowrap;
-justify-content: space-around;
-align-items: center;
+button{
+margin: 1.0rem;
 }
-*/
 /*
 .button {
 display: flex;
@@ -105,8 +99,11 @@ justify-content:right;
 align-items: start;
 }
 */
+
 /*
-button{
-margin: 0.5rem;
-padding: 1.0rem
-}*/
+img:hover   {
+    height: 400px;
+    width: 400px;
+    }
+*/
+

@@ -23,7 +23,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 -----------------------------------------
-flexyboxes
+flexbox
 http://css-live.ru/articles/vizualnoe-rukovodstvo-po-svojstvam-flexbox-iz-css3.html
 https://html5book.ru/css3-flexbox/
 https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Flexible_Box_Layout
