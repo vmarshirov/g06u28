@@ -1,5 +1,5 @@
 
-https://vmarshirov.github.io/g06u28/020_css/050_flexbox/fb.html
+https://vmarshirov.github.io/g06u28/020_css/080_site_00/index.html
 
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/flex
