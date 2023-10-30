@@ -22,7 +22,7 @@ function nav_clear() {
 }*/
 
 async function fetchHTML_01() {
-console.clear()
+//console.clear()
 baseUrl = document.URL
 console.log("baseUrl: ", baseUrl)
 const url = new URL(baseUrl)
