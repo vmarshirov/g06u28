@@ -21,7 +21,7 @@ function nav_clear() {
     component.innerHTML = content
 }*/
 
-function fetchHTML_01() {
+async function fetchHTML_01() {
 //console.clear()
 baseUrl = document.URL
 console.log("baseUrl: ", baseUrl)
