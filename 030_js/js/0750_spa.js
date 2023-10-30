@@ -116,8 +116,8 @@ console.clear()
         search_obj[key] = value
         console.log(search_obj)
     }
-   console.log("search_obj: ", search_obj)
-   var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj
+   console.log("search_obj.page: ", search_obj.page)
+   var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj.page
     console.log("content_url: ", content_url)
 
 const nav_01 = document.getElementById("id_nav_01")
