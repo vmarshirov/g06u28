@@ -48,7 +48,7 @@ function Component_03() {
     fetchJson_03()
 }
 
-
+/*
 // component_02
 async function fetchHTML_02() {
 //    let responce = await fetch("../../tmp/g06u28.component_02.html")
@@ -58,13 +58,13 @@ async function fetchHTML_02() {
     let component = document.getElementById("component")
     component.innerHTML = content
 
-}
+}*/
 
 async function fetchJson_03() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
-    let responce = await fetch("../../tmp/g06u28.shop.json")
+    let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/public_html/pages/shop.json")
     let content = await responce.text()
     console.log("content: ", content)
     content = JSON.parse(content)
