@@ -21,40 +21,10 @@ function nav_clear() {
     component.innerHTML = content
 }*/
 
-async function fetchHTML_01() {
-//console.clear()
-baseUrl = document.URL
-console.log("baseUrl: ", baseUrl)
-const url = new URL(baseUrl)
-console.log("url: ", url)
-console.log("url.pathname: ", url.pathname)
-path_lst  = url.pathname.split("/")
-last_path = path_lst[path_lst.length-1]
-console.log("last_path: ", last_path)
-console.log("url.search: ", url.search)
-search_string = url.search.split("?")
-search_string[1].split("&")
-search_parameters = search_string[1].split("&")
-console.log("search_parameters:", search_parameters)
-search_obj = {}
-for (let index = 0; index < search_parameters.length; index++) {
-    pair = search_parameters[index].split("=")
-    key = pair[0]; value = pair[1]
-    search_obj[key] = value
-    console.log(search_obj)
-}
-console.log("search_obj: ", search_obj)
+async function fetchHTML_01(content_url) {
 
-//  page1 = url.host + url.pathname.slice(0,-14) + "/pages/" + search_obj['page']
-  let page1 = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj['page']
-//   page1 = url.href.slice(0,-37) + "/pages/" + search_obj['page']//   page1 =  "../../tmp/" + search_obj['page']
-   let content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + 'component_01.html'
    console.log("content_url: ", content_url)
-//   let responce = await fetch("./pages/component_01.html")
     let response = await fetch(content_url)
-//    let responce = await fetch(page1)
-//    let responce = await fetch(page1)
-//    ../../tmp/g06u28.component_02.html
     let content = await response.text()
     console.log("content: ", content)
     let component = document.getElementById("component")
@@ -125,7 +95,29 @@ async function fetchJson_02() {
     }
 }
 
-
+    //console.clear()
+    baseUrl = document.URL
+    console.log("baseUrl: ", baseUrl)
+    const url = new URL(baseUrl)
+    console.log("url: ", url)
+    console.log("url.pathname: ", url.pathname)
+    path_lst  = url.pathname.split("/")
+    last_path = path_lst[path_lst.length-1]
+    console.log("last_path: ", last_path)
+    console.log("url.search: ", url.search)
+    search_string = url.search.split("?")
+    search_string[1].split("&")
+    search_parameters = search_string[1].split("&")
+    console.log("search_parameters:", search_parameters)
+    search_obj = {}
+    for (let index = 0; index < search_parameters.length; index++) {
+        pair = search_parameters[index].split("=")
+        key = pair[0]; value = pair[1]
+        search_obj[key] = value
+        console.log(search_obj)
+    }
+   console.log("search_obj: ", search_obj)
+   var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + 'component_01.html'
 
 
 const nav_01 = document.getElementById("id_nav_01")
