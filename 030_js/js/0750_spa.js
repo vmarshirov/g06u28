@@ -21,7 +21,7 @@ function nav_clear() {
     component.innerHTML = content
 }*/
 
-async function fetchHTML_01(content_url) {
+async function fetchHTML_01() {
 
    console.log("content_url: ", content_url)
     let response = await fetch(content_url)
@@ -118,7 +118,7 @@ async function fetchJson_02() {
     }
    console.log("search_obj: ", search_obj)
    var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + 'component_01.html'
-
+    console.log("content_url: ", content_url)
 
 const nav_01 = document.getElementById("id_nav_01")
 nav_01.addEventListener("click", Component_01)
