@@ -46,7 +46,7 @@ for (let index = 0; index < search_parameters.length; index++) {
 console.log("search_obj: ", search_obj)
 
 //  page1 = url.host + url.pathname.slice(0,-14) + "/pages/" + search_obj['page']
-  page1 = "./pages/" + search_obj['page']
+  page1 = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj['page']
 //   page1 = url.href.slice(0,-37) + "/pages/" + search_obj['page']//   page1 =  "../../tmp/" + search_obj['page']
    console.log("page1: ", page1)
 //   let responce = await fetch("./pages/component_01.html")
