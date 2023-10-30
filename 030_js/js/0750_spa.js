@@ -22,16 +22,13 @@ function nav_clear() {
 }*/
 
 async function fetchHTML_01(content_url) {
-
    console.log("content_url: ", content_url)
     let response = await fetch(content_url)
     let content = await response.text()
     console.log("content: ", content)
     let component = document.getElementById("component")
     component.innerHTML = content
-
 }
-
 function navComponent_01() {
     nav_clear()
     nav_01.style = "color: red;"
@@ -41,14 +38,14 @@ function Component_01(content_url) {
     fetchHTML_01(content_url)
 }
 
-function navComponent_02() {
+
+function navComponent_03() {
     nav_clear()
-    nav_02.style = "color: red;"
+    nav_03.style = "color: red;"
 }
-function Component_02() {
-    navComponent_02()
-    fetchHTML_02()
-    fetchJson_02()
+function Component_03() {
+    navComponent_03()
+    fetchJson_03()
 }
 
 
@@ -63,7 +60,7 @@ async function fetchHTML_02() {
 
 }
 
-async function fetchJson_02() {
+async function fetchJson_03() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
@@ -95,7 +92,7 @@ async function fetchJson_02() {
     }
 }
 
-console.clear()
+    console.clear()
     baseUrl = document.URL
     console.log("baseUrl: ", baseUrl)
     const url = new URL(baseUrl)
@@ -123,7 +120,9 @@ console.clear()
 const nav_01 = document.getElementById("id_nav_01")
 nav_01.addEventListener("click", Component_01(content_url))
 const nav_02 = document.getElementById("id_nav_02")
-nav_02.addEventListener("click", Component_02)
+nav_02.addEventListener("click", Component_01(content_url))
+const nav_03 = document.getElementById("id_nav_03")
+nav_03.addEventListener("click", Component_03)
 
 
 
