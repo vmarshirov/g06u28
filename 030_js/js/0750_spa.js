@@ -33,8 +33,33 @@ function navComponent_01() {
     nav_clear()
     nav_01.style = "color: red;"
 }
-function Component_01(content_url) {
+function Component_01() {
     navComponent_01()
+
+        console.clear()
+    baseUrl = document.URL
+    console.log("baseUrl: ", baseUrl)
+    const url = new URL(baseUrl)
+    console.log("url: ", url)
+    console.log("url.pathname: ", url.pathname)
+    path_lst  = url.pathname.split("/")
+    last_path = path_lst[path_lst.length-1]
+    console.log("last_path: ", last_path)
+    console.log("url.search: ", url.search)
+    search_string = url.search.split("?")
+    search_string[1].split("&")
+    search_parameters = search_string[1].split("&")
+    console.log("search_parameters:", search_parameters)
+    search_obj = {}
+    for (let index = 0; index < search_parameters.length; index++) {
+        pair = search_parameters[index].split("=")
+        key = pair[0]; value = pair[1]
+        search_obj[key] = value
+        console.log(search_obj)
+    }
+   console.log("search_obj.page: ", search_obj.page)
+   var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj.page
+    console.log("content_url: ", content_url)
     fetchHTML_01(content_url)
 }
 
@@ -92,35 +117,12 @@ async function fetchJson_03() {
     }
 }
 
-    console.clear()
-    baseUrl = document.URL
-    console.log("baseUrl: ", baseUrl)
-    const url = new URL(baseUrl)
-    console.log("url: ", url)
-    console.log("url.pathname: ", url.pathname)
-    path_lst  = url.pathname.split("/")
-    last_path = path_lst[path_lst.length-1]
-    console.log("last_path: ", last_path)
-    console.log("url.search: ", url.search)
-    search_string = url.search.split("?")
-    search_string[1].split("&")
-    search_parameters = search_string[1].split("&")
-    console.log("search_parameters:", search_parameters)
-    search_obj = {}
-    for (let index = 0; index < search_parameters.length; index++) {
-        pair = search_parameters[index].split("=")
-        key = pair[0]; value = pair[1]
-        search_obj[key] = value
-        console.log(search_obj)
-    }
-   console.log("search_obj.page: ", search_obj.page)
-   var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj.page
-    console.log("content_url: ", content_url)
+
 
 const nav_01 = document.getElementById("id_nav_01")
-nav_01.addEventListener("click", Component_01(content_url))
+nav_01.addEventListener("click", Component_01())
 const nav_02 = document.getElementById("id_nav_02")
-nav_02.addEventListener("click", Component_01(content_url))
+nav_02.addEventListener("click", Component_01())
 const nav_03 = document.getElementById("id_nav_03")
 nav_03.addEventListener("click", Component_03)
 
