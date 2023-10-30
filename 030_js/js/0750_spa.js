@@ -45,10 +45,14 @@ for (let index = 0; index < search_parameters.length; index++) {
 }
 console.log("search_obj: ", search_obj)
 
-  page1 = url.host + url.pathname.slice(0,-14) + "/pages/" + search_obj['page']
+//  page1 = url.host + url.pathname.slice(0,-14) + "/pages/" + search_obj['page']
+  page1 = "./pages/" + search_obj['page']
 //   page1 = url.href.slice(0,-37) + "/pages/" + search_obj['page']//   page1 =  "../../tmp/" + search_obj['page']
    console.log("page1: ", page1)
+//   let responce = await fetch("./pages/component_01.html")
     let responce = await fetch(page1)
+//    let responce = await fetch(page1)
+//    let responce = await fetch(page1)
 //    ../../tmp/g06u28.component_02.html
     let content = await responce.text()
     console.log("content: ", content)
@@ -61,17 +65,26 @@ function navComponent_01() {
     nav_clear()
     nav_01.style = "color: red;"
 }
-
-async function Component_01() {
+function Component_01() {
     navComponent_01()
     fetchHTML_01()
+}
 
+function navComponent_02() {
+    nav_clear()
+    nav_02.style = "color: red;"
+}
+function Component_02() {
+    navComponent_02()
+    fetchHTML_02()
+    fetchJson_02()
 }
 
 
 // component_02
 async function fetchHTML_02() {
-    let responce = await fetch("../../tmp/g06u28.component_02.html")
+//    let responce = await fetch("../../tmp/g06u28.component_02.html")
+    let responce = await fetch("./pages/component_02.html")
     let content = await responce.text()
     console.log("content: ", content)
     let component = document.getElementById("component")
@@ -111,17 +124,7 @@ async function fetchJson_02() {
     }
 }
 
-function navComponent_02() {
-    nav_clear()
-    nav_02.style = "color: red;"
-}
 
-function Component_02() {
-    navComponent_02()
-    fetchHTML_02()
-    fetchJson_02()
-
-}
 
 
 const nav_01 = document.getElementById("id_nav_01")
