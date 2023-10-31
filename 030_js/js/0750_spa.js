@@ -23,44 +23,22 @@ function navComponent_01() {
     nav_clear()
     nav_01.style = "color: red;"
 }
-function Component_01() {
-    console.clear()
-    baseUrl = document.URL
-    console.log("baseUrl: ", baseUrl)
-    const url = new URL(baseUrl)
-    console.log("url: ", url)
-    console.log("url.pathname: ", url.pathname)
-    path_lst  = url.pathname.split("/")
-    last_path = path_lst[path_lst.length-1]
-    console.log("last_path: ", last_path)
-    console.log("url.search: ", url.search)
-    search_string = url.search.split("?")
-    search_string[1].split("&")
-    search_parameters = search_string[1].split("&")
-    console.log("search_parameters:", search_parameters)
-    search_obj = {}
-    for (let index = 0; index < search_parameters.length; index++) {
-        pair = search_parameters[index].split("=")
-        key = pair[0]; value = pair[1]
-        search_obj[key] = value
-        console.log(search_obj)
-    }
-   console.log("search_obj.page: ", search_obj.page)
-   var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj.page
-    console.log("content_url: ", content_url)
-
+function Component_01(content_url) {
     fetchHTML_01(content_url)
     navComponent_01()
 }
 
-
+//------------------------------
 function navComponent_03() {
     nav_clear()
     nav_03.style = "color: red;"
 }
-
-
 async function fetchJson_03() {
+    let component = document.getElementById("component")
+    component.innerHTML += `
+    <h6>component_03.html</h6>
+    <p>Содержание параграфа 1.</p>`
+
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
@@ -75,9 +53,9 @@ async function fetchJson_03() {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
-    let ul_0 = document.getElementById("ul_0")
+
     for (key in content) {
-        ul_0.innerHTML += `
+        component.innerHTML += `
         <li class="m-2 list-group-item">
         <img src=${content[key].img} width="200px">
         <h6>${content[key].title}</h6>
@@ -92,10 +70,42 @@ async function fetchJson_03() {
     }
 }
 function Component_03() {
-    navComponent_03()
     fetchJson_03()
+    navComponent_01()
 }
 
+console.clear()
+baseUrl = document.URL
+console.log("baseUrl: ", baseUrl)
+const url = new URL(baseUrl)
+console.log("url: ", url)
+console.log("url.pathname: ", url.pathname)
+path_lst  = url.pathname.split("/")
+last_path = path_lst[path_lst.length-1]
+console.log("last_path: ", last_path)
+console.log("url.search: ", url.search)
+search_string = url.search.split("?")
+search_string[1].split("&")
+search_parameters = search_string[1].split("&")
+console.log("search_parameters:", search_parameters)
+search_obj = {}
+for (let index = 0; index < search_parameters.length; index++) {
+    pair = search_parameters[index].split("=")
+    key = pair[0]; value = pair[1]
+    search_obj[key] = value
+    console.log(search_obj)
+}
+console.log("search_obj.page: ", search_obj.page)
+var content_url  = "../public_html/pages/" + search_obj.page
+console.log("content_url: ", content_url)
+
+if(search_obj.page ==  "component_03.html"){
+Component_03()
+}
+else{Component_01(content_url)}
+
+
+/*
 
 const nav_01 = document.getElementById("nav_01_id")
 nav_01.addEventListener("click", Component_01())
@@ -105,4 +115,5 @@ const nav_03 = document.getElementById("nav_03_id")
 nav_03.addEventListener("click", Component_03())
 
 
+*/
 
