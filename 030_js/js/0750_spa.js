@@ -51,11 +51,15 @@ async function fetchJson_03() {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
+     innerHTML +=`
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <input type="hidden"  name="q" value="search">
+    `
     innerHTML +='<div class="d-flex flex-wrap">'
     for (key in content) {
         innerHTML += `
         <div class="border p-2 m-2" style="width: 200px;">
-        <img src=${content[key].img} width="150px">
+        <img src=${content[key].img} width="180px">
         <h6>${content[key].title}</h6>
         <p>${content[key].description}. Цена
         ${content[key].price} р.</p>
@@ -66,7 +70,10 @@ async function fetchJson_03() {
         </div>
         `
     }
-    innerHTML +='\n</div>'
+    innerHTML +=`
+    </div>
+    <button type="submit" class="btn btn-light">Заказать</button>
+    `
     console.log(innerHTML)
     component.innerHTML = innerHTML
 }
