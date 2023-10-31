@@ -2,12 +2,17 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 // https://jsonplaceholder.typicode.com/
 
-function nav_clear() {
+function nav_clear(page) {
     const nav_items = document.getElementsByClassName("nav-link")
     for (let index = 0; index < nav_items.length; index++) {
         console.log("index: ", index)
         console.log("id: ", nav_items[index].id)
+        console.log("page: ", page)
         nav_items[index].style = "color: green;"
+        if(nav_items[index].id == page) {
+        nav_items[index].style = "color: red;"
+        }
+
     }
 }
 
@@ -19,20 +24,20 @@ async function fetchHTML_01(content_url) {
     let component = document.getElementById("component")
     component.innerHTML = content
 }
-function navComponent_01() {
-    nav_clear()
+function navComponent_01(page) {
+    nav_clear(page)
     nav_01.style = "color: red;"
 }
-function Component_01(content_url) {
+function Component_01(content_url, page) {
     fetchHTML_01(content_url)
-    navComponent_01()
+    navComponent_01(page)
 }
 
 //------------------------------
-function navComponent_03() {
+/*function navComponent_03() {
     nav_clear()
     nav_03.style = "color: red;"
-}
+}*/
 async function fetchJson_03() {
     let component = document.getElementById("component")
     let innerHTML = '<h6>component_03</h6>\n<p>Содержание ...</p>\n\n'
@@ -63,7 +68,7 @@ async function fetchJson_03() {
         <h6>${content[key].title}</h6>
         <p>${content[key].description}. Цена
         ${content[key].price} р.</p>
-        <p>Заказать
+        <p>Количество
         <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
         <input type="number" name="amount" value="0" style="width: 2.0rem;">
         </p>
@@ -72,14 +77,14 @@ async function fetchJson_03() {
     }
     innerHTML +=`
     </div>
-    <button type="submit" class="btn btn-light">Заказать</button>
+    <button type="submit" class="btn btn-light">Оформить</button>
     `
     console.log(innerHTML)
     component.innerHTML = innerHTML
 }
-function Component_03() {
+function Component_03(content_url, page) {
     fetchJson_03()
-    navComponent_01()
+    navComponent_01(page)
 }
 
 console.clear()
@@ -108,9 +113,9 @@ var content_url  = "../public_html/pages/" + search_obj.page
 console.log("content_url: ", content_url)
 
 if(search_obj.page ==  "component_03.html"){
-Component_03()
+Component_03(content_url, search_obj.page)
 }
-else{Component_01(content_url)}
+else{Component_01(content_url, search_obj.page)}
 
 
 /*
