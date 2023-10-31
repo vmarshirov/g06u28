@@ -11,16 +11,6 @@ function nav_clear() {
     }
 }
 
-// component_01
-/*async function fetchHTML_01() {
-//    page = '../../tmp/g06u28/' + search_obj['page']
-    let responce = await fetch("../../tmp/g06u28.component_02.html")
-    let content = await responce.text()
-    console.log("content: ", content)
-    let component = document.getElementById("component")
-    component.innerHTML = content
-}*/
-
 async function fetchHTML_01(content_url) {
    console.log("content_url: ", content_url)
     let response = await fetch(content_url)
@@ -34,9 +24,7 @@ function navComponent_01() {
     nav_01.style = "color: red;"
 }
 function Component_01() {
-    navComponent_01()
-
-        console.clear()
+    console.clear()
     baseUrl = document.URL
     console.log("baseUrl: ", baseUrl)
     const url = new URL(baseUrl)
@@ -60,7 +48,9 @@ function Component_01() {
    console.log("search_obj.page: ", search_obj.page)
    var content_url  = "https://vmarshirov.github.io/g06u28/030_js/public_html/pages/" + search_obj.page
     console.log("content_url: ", content_url)
+
     fetchHTML_01(content_url)
+    navComponent_01()
 }
 
 
@@ -68,22 +58,7 @@ function navComponent_03() {
     nav_clear()
     nav_03.style = "color: red;"
 }
-function Component_03() {
-    navComponent_03()
-    fetchJson_03()
-}
 
-/*
-// component_02
-async function fetchHTML_02() {
-//    let responce = await fetch("../../tmp/g06u28.component_02.html")
-    let responce = await fetch("./pages/component_02.html")
-    let content = await responce.text()
-    console.log("content: ", content)
-    let component = document.getElementById("component")
-    component.innerHTML = content
-
-}*/
 
 async function fetchJson_03() {
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
@@ -102,21 +77,24 @@ async function fetchJson_03() {
     }
     let ul_0 = document.getElementById("ul_0")
     for (key in content) {
-        ul_0.innerHTML += ` 
-        <li class="m-2 list-group-item"> 
+        ul_0.innerHTML += `
+        <li class="m-2 list-group-item">
         <img src=${content[key].img} width="200px">
         <h6>${content[key].title}</h6>
-        <p>${content[key].description}. Цена 
+        <p>${content[key].description}. Цена
         ${content[key].price} р.</p>
-        <p>Заказать 
+        <p>Заказать
         <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
         <input type="number" name="amount" value="0" style="width: 2.0rem;">
-        </p> 
+        </p>
         </li>
            `
     }
 }
-
+function Component_03() {
+    navComponent_03()
+    fetchJson_03()
+}
 
 
 const nav_01 = document.getElementById("nav_01_id")
