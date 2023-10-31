@@ -35,9 +35,7 @@ function navComponent_03() {
 }
 async function fetchJson_03() {
     let component = document.getElementById("component")
-    component.innerHTML += `
-    <h6>component_03.html</h6>
-    <p>Содержание параграфа 1.</p>`
+    let innerHTML = '<h6>component_03</h6>\n<p>Содержание ...</p>\n\n'
 
     // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
     //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
@@ -53,11 +51,11 @@ async function fetchJson_03() {
         console.log(content[key].id, content[key].title)
         console.log(content[key])
     }
-
+    innerHTML +='<div class="d-flex flex-wrap">'
     for (key in content) {
-        component.innerHTML += `
-        <li class="m-2 list-group-item">
-        <img src=${content[key].img} width="200px">
+        innerHTML += `
+        <div class="border p-2 m-2" style="width: 200px;">
+        <img src=${content[key].img} width="150px">
         <h6>${content[key].title}</h6>
         <p>${content[key].description}. Цена
         ${content[key].price} р.</p>
@@ -65,9 +63,12 @@ async function fetchJson_03() {
         <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
         <input type="number" name="amount" value="0" style="width: 2.0rem;">
         </p>
-        </li>
-           `
+        </div>
+        `
     }
+    innerHTML +='\n</div>'
+    console.log(innerHTML)
+    component.innerHTML = innerHTML
 }
 function Component_03() {
     fetchJson_03()
