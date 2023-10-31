@@ -120,11 +120,11 @@ async function fetchJson_03() {
 
 
 const nav_01 = document.getElementById("nav_01_id")
-nav_01.addEventListener("click", Component_01)
+nav_01.addEventListener("click", Component_01())
 const nav_02 = document.getElementById("nav_02_id")
-nav_02.addEventListener("click", Component_01)
+nav_02.addEventListener("click", Component_01())
 const nav_03 = document.getElementById("nav_03_id")
-nav_03.addEventListener("click", Component_03)
+nav_03.addEventListener("click", Component_03())
 
 
 
