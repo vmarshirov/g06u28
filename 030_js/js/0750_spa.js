@@ -58,8 +58,8 @@ async function fetchJson_03() {
     innerHTML +='<div class="d-flex flex-wrap">'
     for (key in content) {
         innerHTML += `
-        <div class="border p-2 m-2" style="width: 200px;">
-        <img src=${content[key].img} width="180px">
+        <div class="border p-2 m-2" style="width: 220px;">
+        <img src=${content[key].img} width="200px">
         <h6>${content[key].title}</h6>
         <p>${content[key].description}. Цена
         ${content[key].price} р.</p>
