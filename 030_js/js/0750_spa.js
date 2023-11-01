@@ -92,6 +92,9 @@ console.log("baseUrl: ", baseUrl)
 const url = new URL(baseUrl)
 console.log("url: ", url)
 console.log("url.search: ", url.search)
+if(url.search.length <=1){
+    url.search = "?content_file_key=component_01.html"
+}
 search_string = url.search.split("?")
 search_string[1].split("&")
 search_parameters = search_string[1].split("&")
