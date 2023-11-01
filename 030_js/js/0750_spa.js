@@ -6,10 +6,12 @@ function nav_clear(page) {
     const nav_items = document.getElementsByClassName("nav-link")
     for (let index = 0; index < nav_items.length; index++) {
         console.log("index: ", index)
-        console.log("id: ", nav_items[index].id)
         console.log("page: ", page)
         nav_items[index].style = "color: green;"
         if(nav_items[index].id == page) {
+        console.log('nav_items[index].id: ', nav_items[index].id)
+        console.log("innerText: ", nav_items[index].innerText)
+        document.getElementsByTagName("title")[0].innerText=nav_items[index].innerText
         nav_items[index].style = "color: red;"
         }
 
