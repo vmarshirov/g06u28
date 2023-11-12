@@ -5,8 +5,10 @@
 Соответственно 15 ноября лекция отменяется 
 
 https://disk.yandex.ru/i/5Y7jHCYeorVLGQ - это  8 ноября
+
 https://disk.yandex.ru/i/EyjDvIvXDYyXww  - это 15 ноября, часть 1 
-hhttps://disk.yandex.ru/i/Zw4m1SqdOFLTzw  - это 15 ноября, часть 2
+
+https://disk.yandex.ru/i/Zw4m1SqdOFLTzw  - это 15 ноября, часть 2
 
 Очень советую внимательно просмотреть
 
