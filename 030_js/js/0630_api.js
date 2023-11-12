@@ -10,7 +10,7 @@ async function getResponce() {
     content = JSON.parse(content)
 
     // content = await responce.json()
-    content = content.splice(0, 4)
+    content = content.splice(0, 11)
 
     console.log(content)
 
