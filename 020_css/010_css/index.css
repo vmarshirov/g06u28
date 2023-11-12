@@ -1,15 +1,15 @@
 /*:root {font-size: 20px}*/
 * {
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     margin: 5px: auto;
     padding: 4px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .em { font-size: 1.0em}
 .rem { font-size: 1.0rem}
-.parent {font-size:30px}
+.parent {font-size:25px}
 
 body {
     background-color: white;
@@ -28,6 +28,7 @@ p {
 p[title="Подсказка"]{
     color:darkred
 }
+
 p::first-line {
     background: red;
 }
@@ -51,12 +52,13 @@ card {
 }
 
 .note {
-    color: red;
     font-weight: bold;
+    font-size: xxx-large;
 }
 
 #news {
     color: green;
+    background: beige;
 }
 
 p font:first-child {

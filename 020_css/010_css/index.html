@@ -12,11 +12,11 @@
 -->
 Стиль текста для body
 
-<p>Стиль текста для <span>123</span>абзаца (из внешней или глобальной таблицы)</p>
-<p style="color:red; border-color: green ">Встроенный стиль для узла</p>
-<p style=" text-align:center; line-height:80px ">text-align:center; line-height:80px </p>
+<p> p1_Стиль текста для <span>123</span>абзаца (из внешней или глобальной таблицы)</p>
+<p style="color:green; border-color: blue ">p2_Встроенный стиль для узла</p>
+<p style=" text-align:center; line-height:4.0em ">p3_text-align:center; line-height:4.0em </p>
 
-<p style="text-decoration:none; letter-spacing:1.0rem; word-spacing:2.0rem">Примеры возможностей стилей.
+<p style="text-decoration:none; letter-spacing:0.0em; word-spacing:4.0rem">p4_Примеры возможностей стилей. text-decoration:none; letter-spacing:0.0em; word-spacing:4.0rem
     <br><span style="border-color:blue"> и еще возможности стилей</span>
     <br> И еще представления
     <span style="vertical-align:super">vertical-align:super</span>
@@ -25,17 +25,23 @@
     абзаца
 </p>
 
-<p>Это стиль для абзаца (из внешней или глобальной таблицы).</p>
+<p>p5_ Это стиль для абзаца <br>(из внешней или глобальной таблицы).</p>
 
 
-<p class="note">Назначен класс ".note"</p>
-<p id="news">Назначен идентификтор "#news"</p>
+<p class="note">p6_Назначен класс ".note"</p>
+<p>p6_<span class="note">Назначен класс ".note</span>span>"</p>
+
+
+<p id="news">p7_Назначен идентификтор "#news"</p>
+
+
 
 <div>
     <p class="rem">rem</p>
     <p class="em">em</p>
 </div>
 <div class="parent">
+    Parent
     <p class="rem">rem - from root(* или :root)</p>
     <p class="em">em - from parent</p>
 </div>
