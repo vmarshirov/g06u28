@@ -62,8 +62,7 @@ https://vmarshirov.github.io/2023_Basics_of_Web_Tecnologies/JS_DOM/step_abc.html
 ##### Ссылка меняется при каждом новом сеансе и при разрыве связи. Для надежного обновления страницы: CTRL+F5
 #### Рабочая ведомость (worksheets), видео, сжатые архивы и др. размещены на: https://disk.yandex.ru/d/i2UnklcmbY_12A
 #### Требования к контрольной работе 1 в: https://vmarshirov.github.io/g06u28/requirements_html.html
-#### Требования к контрольной работе 2 в: https://vmarshirov.github.io/g06u28/requirements_css.md
-
+#### Требования к контрольной работе 2 в: https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
 Если возникают срочная  необходимость: vmarshirov@hse.ru; телефон +79081605316   
 
 <!---
