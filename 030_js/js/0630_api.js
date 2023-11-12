@@ -24,14 +24,12 @@ async function getResponce() {
     let ul_0 = document.getElementsByTagName("ul")[0]
     for (key in content) {
         ul_0.innerHTML += ` 
-        <li class="m-3 list-group-item"> 
-        <img src=${content[key].img} width="200px">
+        <li style="width: 250px" class="d-flex flex-column m-1 p-3 border bg-body">
+        <img style="width: 180px" class="align-self-center" src=${content[key].img}>
         <h5>${content[key].title}</h5>
-        <p>${content[key].description}. Цена 
-        ${content[key].price} р.</p>
-        <p>Заказать 
+        <p>${content[key].description}. Цена ${content[key].price} р.</p>
         <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
-        <input type="number" name="amount" value="0" size="2">
+        <p>Заказать <input class="w-25" type="number" name="amount" value="0">
         </p> 
         </li>
                 `
