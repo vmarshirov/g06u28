@@ -3,43 +3,43 @@ text-decoration:none;
 background-color:none;
 left:0px;
 top:0px;
-border: 1px solid red;
+border: 5px solid red;
 margin:0px;
 padding:0;
 }
 
 html{
 margin: 5px;
-border:2px solid white;
+border:6px solid white;
 padding: 3px;
-background-color: rgb(250,0,100);
+background-color: blue;
 }
 
 body{
-border:5px solid green;
-margin: 5px;
-height:50em;
-background-color: rgb(100,150,250);
+border:9px solid green;
+margin: 15px;
+height:60em;
+background-color: yellow;
 }
 
 header{
 position:absolute; 
 left:5%;
-top:30px;
+top:35px;
 width: 90%;
-height: 4em;
+height: 9.rem;
 background-color: rgb(10,100,100);
-border: 0px solid red;
+border: 1px solid black;
 margin: 0px;
-padding: 0px;
+padding: 15px;
 }
 
 aside,main, article{
 position:absolute; 
-top:6.5em;
+top:10.0rem;
 height: 16em;  
 background-color: rgb(40,100,10);
-//border: 1px solid red;
+border: 4px solid blue;
 //margin: 0px;
 //padding: 0px;
 float:left;
