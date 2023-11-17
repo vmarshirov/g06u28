@@ -19,7 +19,7 @@ https://disk.yandex.ru/d/7WaOHxzA6I50YQ
 
 
 ##### Для участников (семинары, ограничение на 40 участников):
-
+https://telemost.yandex.ru/j/74508462417094
 
 
 
