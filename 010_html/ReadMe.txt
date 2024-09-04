@@ -20,6 +20,10 @@ http://www.sumopaint.com/app/"  - Графический редактор(для
 http://www.w3.org/TR/html401/sgml/entities.html   - Представления символов в HTML4</A>
 http://www.w3schools.com/tags/ref_entities.asp   - Представления символов в HTML4(удобнее)</A>
 
+https://stepik.org/course/38218/info
+https://www.w3schools.com/html/
+
+
 ========================================================================
 
 1.	Организационная структура WWW. 
