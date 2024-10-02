@@ -1,7 +1,7 @@
 const node_for_click = document.getElementById("for_click")
 
 function find_edit(){
-    const item  = document.getElementsByTagName('p')[1]
+    const item  = document.getElementById('new')
     console.log(item.innerText)
     item.innerText = 'новое значение'
 }
