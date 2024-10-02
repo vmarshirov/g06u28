@@ -31,8 +31,7 @@
 ####	
 16 - 17. Создание страницы с формой для описания, решения (используя JavaScript) оригинальной алгоритмической задачи. На удаленный сервер отправлять условие, исходные данные и результаты решения.
 	<br>Пример на https://vmarshirov.github.io/g06u28/030_js/public_html/0121_abc.html
-	<br>Список студентов в https://disk.yandex.ru/d/bQO_gZWRs_OQQA)
-	<br>Индивидуальное задание в https://github.com/vmarshirov/g06u28/tree/main/task_01
+
 
 
 
