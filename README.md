@@ -9,18 +9,12 @@ https://telemost.yandex.ru/j/7859364015
 ##### Для зрителей (лекции, ограничение - 10000 зрителей, писать в чат и на электронку vmarshirov@hse.ru):
 
 
-##### Сайт с лекций сохраняется на:
-https://github.com/vmarshirov/2024_BWT/blob/main/README.md
+#### Материалы с лекций  сохраняется на: https://github.com/vmarshirov/2024_BWT
+Ссылки на страницы c лекций : https://github.com/vmarshirov/2024_BWT/blob/main/README.md
 
 
 
 
-
-
-
-
-
-##### Ссылка меняется при каждом новом сеансе и при разрыве связи. Для надежного обновления страницы: CTRL+F5
 #### Рабочая ведомость (worksheets), видео, сжатые архивы и др. размещены на: https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q
 #### Требования к контрольной работе 1 (с подробными пояснениями ) в:https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2024.md
 #### Требования к контрольной работе 1 (неудачная версия) в: https://vmarshirov.github.io/g06u28/requirements_html.html
