@@ -12,9 +12,6 @@ https://telemost.yandex.ru/j/7823976366
 #### Материалы с лекций  сохраняется на: https://github.com/vmarshirov/2024_BWT
 Ссылки на страницы c лекций : https://github.com/vmarshirov/2024_BWT/blob/main/README.md
 
-
-
-
 #### Рабочая ведомость (worksheets), видео, сжатые архивы и др. размещены на: https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q
 #### Требования к контрольной работе 1 (с подробными пояснениями ) в:  https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2024.md
 #### Требования к контрольной работе 2 в: https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
