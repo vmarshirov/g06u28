@@ -6,56 +6,36 @@ function verify() {
     console.log(a, b, c)
 
     let low, high
-    if (a < b) {
-        low = a;
-        high = b;
-    }
-    else {
-        low = b;
-        high = a;
-    }
+    if (a < b) { low = a;    high = b;  }
+    else { low = b; high = a; }
 
     if (c >= low && c <= high) {
-        result = " С принадлежит заданному диапазону"
-        document.getElementById("result").innerText = messageText + result;
-        document.getElementsByName('result')[0].value = result;
+        result = "С принадлежит заданному диапазону"
         check = true;
-    } else {
-        result = " С не принадлежит заданному диапазону"
-        document.getElementById("result").innerText = messageText + result;
-        document.getElementsByName('result')[0].value = result;
+    } 
+    else {
+        result = "С не принадлежит заданному диапазону"
         check = false;
     }
+    document.getElementById("result").value = result;
 }
 
 function send() {
     if (check) {
-        let textCondition = document.getElementsByTagName('p')[0].innerText
-        document.getElementsByName('formulation')[0].value = textCondition;
-        document.getElementsByName('result')[0].value = result;
         document.getElementById("UserEnter").submit();
     } else {
         alert("Есть недостатки. Повторите ввод")
     }
 }
 
-function verify_send() {
-    verify();
-    send();
-}
 
-let messageText = document.getElementById("result").innerText
-console.log(messageText)
+
 let result;
-let check = false;
+let check;
 
 const elementA = document.getElementById("a");
-
 const elementB = document.getElementById("b");
-
-
 const elementC = document.getElementById("c");
-
 
 const elementVerify = document.getElementById("verify");
 elementVerify.addEventListener('click', verify);
