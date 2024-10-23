@@ -50,13 +50,12 @@ let result;
 let check = false;
 
 const elementA = document.getElementById("a");
-elementA.addEventListener('input', verify);
 
 const elementB = document.getElementById("b");
-elementB.addEventListener('keyup', verify);
+
 
 const elementC = document.getElementById("c");
-elementC.addEventListener('keyup', verify);
+
 
 const elementVerify = document.getElementById("verify");
 elementVerify.addEventListener('click', verify);
