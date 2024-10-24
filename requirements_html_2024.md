@@ -40,7 +40,7 @@
 <br>Пример на https://vmarshirov.github.io/g06u28/030_js/public_html/0121_abc.html
 
 
-
+###  Видео с комментариями и пояснениями к требованиям: https://disk.yandex.ru/i/NsljYfWP0ELn0g размещено в https://disk.yandex.ru/d/0bEXvIYEUm3qGg
 
 #### Защита работы 2024-11-06. Можно досрочно
 #### Защита с опозданием - минус 2 балла за контрольную
