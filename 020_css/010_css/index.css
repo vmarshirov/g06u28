@@ -25,9 +25,7 @@ p {
     background: silver;
 }
 
-p[title="Подсказка"]{
-    color:darkred
-}
+
 
 p::first-line {
     background: red;
@@ -53,7 +51,7 @@ card {
 
 .note {
     font-weight: bold;
-    font-size: xxx-large;
+    font-size:larger;
 }
 
 #news {

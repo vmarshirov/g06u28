@@ -7,54 +7,55 @@
 </head>
 
 <body>
-<!--
+    <!--
 <body style="background-color:silver; color:red; background-image: url(1.png) ;  background-repeat:repeat-x;  background-position:  top center">
 -->
-Стиль текста для body
+    Стиль текста для body
 
-<p> p1_Стиль текста для <span>123</span>абзаца (из внешней или глобальной таблицы)</p>
-<p style="color:green; border-color: blue ">p2_Встроенный стиль для узла</p>
-<p style=" text-align:center; line-height:4.0em ">p3_text-align:center; line-height:4.0em </p>
+    <p> p1_Стиль текста для <span>123</span>абзаца (из внешней или глобальной таблицы)</p>
+    <p style="border-style: solid; color:green; ">p2_Встроенный стиль для узла</p>
+    <p style="border-style:dotted; border-color: blue; color:red; text-align:center; line-height:4.0em ">
+        p3_text-align:center; line-height:4.0em </p>
+    <p style="border-style: solid; text-decoration:none; letter-spacing:0.0em; ">
+        p4_Примеры возможностей стилей. text-decoration:none; letter-spacing:0.0em; word-spacing:4.0rem
+        <br>и еще<span style="background: green ; color:red; word-spacing:0.0rem"> возможности </span> стилей
+        <br> И еще представления степеней и индексов
+        <span style="vertical-align:super">vertical-align:super</span>
+        и
+        <span style="vertical-align:sub">vertical-align:sub</span>
+        абзаца
+    </p>
 
-<p style="text-decoration:none; letter-spacing:0.0em; word-spacing:4.0rem">p4_Примеры возможностей стилей. text-decoration:none; letter-spacing:0.0em; word-spacing:4.0rem
-    <br><span style="border-color:blue"> и еще возможности стилей</span>
-    <br> И еще представления
-    <span style="vertical-align:super">vertical-align:super</span>
-    и
-    <span style="vertical-align:sub">vertical-align:sub</span>
-    абзаца
-</p>
-
-<p>p5_ Это стиль для абзаца <br>(из внешней или глобальной таблицы).</p>
-
-
-<p class="note">p6_Назначен класс ".note"</p>
-<p>p6_<span class="note">Назначен класс ".note</span>span>"</p>
+    <p>p5_ Это стиль для абзаца <br>(из внешней или глобальной таблицы).</p>
 
 
-<p id="news">p7_Назначен идентификтор "#news"</p>
+    <p class="note">p6_Назначен класс ".note"</p>
+    <p>p6_<span class="note">Назначен класс ".note</span>span>"</p>
+
+
+    <p id="news">p7_Назначен идентификтор "#news"</p>
 
 
 
-<div>
-    <p class="rem">rem</p>
-    <p class="em">em</p>
-</div>
-<div class="parent">
-    Parent
-    <p class="rem">rem - from root(* или :root)</p>
-    <p class="em">em - from parent</p>
-</div>
+    <div>
+        <p class="rem">rem</p>
+        <p class="em">em</p>
+    </div>
+    <div class="parent">
+        Parent
+        <p class="rem">rem - from root(* или :root)</p>
+        <p class="em">em - from parent</p>
+    </div>
 
-<ul>
-    <li><a href="./index.html">./index.html</a></li>
-    <li><a href="./index.html">./index.html</a></li>
-    <li><a class='active' href="./index.html">./index.html</a></li>
-</ul>
+    <ul>
+        <li><a href="./index.html">./index.html</a></li>
+        <li><a href="./index.html">./index.html</a></li>
+        <li><a class='active' href="./index.html">./index.html</a></li>
+    </ul>
 
-<div>
+    <div>
 
-</div>
+    </div>
 
 
 </body>
@@ -71,5 +72,3 @@
 </pre>
 
 </html>
-
-

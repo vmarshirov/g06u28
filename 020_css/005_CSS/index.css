@@ -1,12 +1,7 @@
-html {
-  font-size: 1.0em; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
-  font-family: 'Open Sans1', sans-serif1
-}
 
 body {
   width: 60px;
-  margin: 0 auto;
+  margin:auto;
   background-color: red;
-  padding:;
-  border: 15px solid black;
+  border: 5px solid black;
 }

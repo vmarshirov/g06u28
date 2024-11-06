@@ -17,7 +17,8 @@ header {
     height: 2rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
     margin: 0;
 }
@@ -60,8 +61,8 @@ article {
 }
 
 article {
-    flex-grow:0;
-    flex-shrink:0;
+    flex-grow: 0;
+    flex-shrink: 0;
     /*flex-basiss:350px;*/
     /*flex-basis:300px; - размер относит. родителя*/
 }
@@ -76,8 +77,8 @@ article {
 
 
 .basis_grow_shrink {
-    flex-grow:0;
-    flex-shrink:0;
+    flex-grow: 0;
+    flex-shrink: 0;
     /*
     flex-basis:350px;
     flex-grow:1; - растяжение
@@ -85,7 +86,7 @@ article {
     */
 }
 
-.basis_grow_shrink_new{
+.basis_grow_shrink_new {
     flex-basis: 0px;
     flex-grow: 1;
     flex-shrink: 0;
