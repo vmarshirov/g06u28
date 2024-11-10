@@ -4,12 +4,12 @@ async function getResponce() {
     //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
 //    let responce = await fetch("../../tmp/g06u28.shop.json")
     let responce = await fetch("../data/shop.json")
-
+    console.log("responce:\n", responce, "\n /responce: \n")
     let content = await responce.text()
-    console.log(content)
+    console.log("await responce.text()\n", content)
     content = JSON.parse(content)
-    content = content.splice(0, 9)
-    console.log(content)
+    content = content.slice(0, 9)
+    console.log("content.slice(0, 9)", content)
     let key
     for (key in content) {
         console.log(content[key].id, content[key].title)
@@ -30,4 +30,3 @@ async function getResponce() {
     }
 }
 getResponce()
-
