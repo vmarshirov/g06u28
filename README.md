@@ -9,9 +9,9 @@ https://telemost.yandex.ru/j/9305600849
 
 ##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. размещены на: https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q
 
-##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2024.md
+##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2024.md
 
-##### Требования к контрольной работе 2 в: https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
+##### Требования к контрольной работе 2 в: <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
 
 Если возникают срочная  необходимость: vmarshirov@hse.ru; телефон +79081605316   
 
