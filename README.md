@@ -3,7 +3,8 @@
 
 ##### Материалы с лекций  сохраняется на: https://github.com/vmarshirov/2024_BWT
 
-##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. размещены на: https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q
+##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. (2024) размещены на: https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q
+##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. (2024) размещены на:
 
 ##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2024.md
 
