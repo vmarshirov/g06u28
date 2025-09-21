@@ -4,7 +4,6 @@
 ##### 
 
 ##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. (2025) размещены на: https://disk.360.yandex.ru/d/4X-70IPTsY4YDg
-##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. (2024) размещены на: https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q
 
 ##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2024.md
 
