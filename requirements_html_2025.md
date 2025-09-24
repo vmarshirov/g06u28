@@ -35,7 +35,7 @@
 <br><br>__03.Создать страницу для решения алгоритмической задачи. Название страницы "Решение алгоритмической задачи".  Пример представлен на https://vmarshirov.github.io/g06u28/030_js/public_html/0121_abc.html
 
 <br>Для определения своей алгоритмической задачи следует:
-<br>- по списку  студентов в https://disk.yandex.ru/d/PLdNLfQ8brQZ-Q  определить свой номер
+<br>- по списку  студентов в https://disk.360.yandex.ru/d/71esd71N7ERSNA  определить свой номер
 <br>- по номеру с использованием https://github.com/vmarshirov/g06u28/blob/main/task_01/01_students%26numbers.pdf определить номер задачи
 <br>-  по номеру задачи в https://github.com/vmarshirov/g06u28/blob/main/task_01/02_numbres%26tasks.txt определиться с содержанием задачи
 
