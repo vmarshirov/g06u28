@@ -5,6 +5,8 @@
 
 ##### Рабочая ведомость (worksheets), видео, сжатые архивы и др. (2025) размещены на: https://disk.360.yandex.ru/d/4X-70IPTsY4YDg
 
+##### https://github.com/vmarshirov/2025_BWT - здесь лежат примеры
+
 ##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2025.md
 
 ##### Требования к контрольной работе 2 в: <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
