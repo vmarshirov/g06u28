@@ -7,7 +7,7 @@
 
 ##### https://github.com/vmarshirov/2025_BWT - здесь лежат фрагменты с лекций
 
-##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_html_2025.md
+##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/tree/main/task_01
 
 ##### Требования к контрольной работе 2 в: <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
 
