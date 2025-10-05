@@ -5,7 +5,7 @@
 
 ##### Рабочая ведомость, видео, сжатые архивы и др. (2025) размещены на: https://disk.360.yandex.ru/d/4X-70IPTsY4YDg
 
-##### https://github.com/vmarshirov/2025_BWT - здесь лежат фрагменты с лекций
+##### https://github.com/vmarshirov/BWT_Ed - здесь лежат фрагменты с лекций
 
 ##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/tree/main/task_01
 
