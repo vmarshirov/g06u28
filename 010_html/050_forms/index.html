@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Формы. Отправляем данные на сервер</title>
 </head>
 
 <html>
+
 <body>
-<h3 align="center">Формы. Отправляем данные на сервер</h3>
-<!--<form action="../../cgi-bin/form_action.py" method='get' target='_self'>-->
-<!--<form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>-->
-<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
-    <p>Для поисковика:<input type="hidden"  name="q" value="search"></p>
-    <p>Фамилия: <input type="Text" name="last_name" size=20  value="Петров"></p>
-    <p>Возраст: <input type="Number" name="age" size=20 value="0"></p>
-    <p>Место проживания:
-        <input type="Radio" name="place" value="Moscow">Москва
-        <input type="Radio" name="place" value="Nizhny" checked >Нижний
-    </p>
+    <h3 align="center">Формы. Отправляем данные на сервер</h3>
+    <!--<form action="../../cgi-bin/form_action.py" method='get' target='_self'>-->
+    <!--<form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>-->
+    <!-- <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank"> -->
+    <form action="https://httpbin.org/post" method='post' >
+        <p>Для поисковика:<input type="hidden" name="q" value="search"></p>
+        <p>Фамилия: <input type="Text" name="last_name" size=20 value="Петров"></p>
+        <p>Возраст: <input type="Number" name="age" size=20 value="0"></p>
+        <p>Место проживания:
+            <input type="Radio" name="place" value="Moscow">Москва
+            <input type="Radio" name="place" value="Nizhny" checked>Нижний
+        </p>
 
-    <p>Стаж работы:
-        <input type="Checkbox" name="experience"  value="10" checked>Маркетологом - 10
-        <input type="Checkbox"  name="experience"   value="20" checked>Экономистом -20
-        <input type="Checkbox" name="experience" value="30" checked>Менеджером -30
-    </p>
+        <p>Стаж работы:
+            <input type="Checkbox" name="experience" value="10" checked>Маркетологом - 10
+            <input type="Checkbox" name="experience" value="20" checked>Экономистом -20
+            <input type="Checkbox" name="experience" value="30" checked>Менеджером -30
+        </p>
 
-    <p>Знание английского
-        <select name="languages">
-            <OPTION value="Владею свободно">Владею свободно</OPTION>
-            <OPTION value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</OPTION>
-        </select>
-    </p>
+        <p>Знание английского
+            <select name="languages">
+                <OPTION value="Владею свободно">Владею свободно</OPTION>
+                <OPTION value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</OPTION>
+            </select>
+        </p>
 
-    <p> Дополнительная информация:
-        <br>
-        <TEXTAREA cols=80 rows=4 name="textarea" >Для заметок</TEXTAREA>
-    </p>
+        <p> Дополнительная информация:
+            <br>
+            <TEXTAREA cols=80 rows=4 name="textarea">Для заметок</TEXTAREA>
+        </p>
 
-    <p>Дата: <input type="date" name="user_date"  value='2024-10-02'></p>
-    <p>Пароль: <input type="Password" name="password" size=9  value="123"></p>
-    <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
-    <p>Название файла: <input type="Техт" name="000_file_name" value="Н_ОW_Г_326510_1_Ivanov.txt" size='30'></p>
+        <p>Дата: <input type="date" name="user_date" value='2024-10-02'></p>
+        <p>Пароль: <input type="Password" name="password" size=9 value="123"></p>
+        <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+        <p>Название файла: <input type="Техт" name="000_file_name" value="Н_ОW_Г_326510_1_Ivanov.txt" size='30'></p>
 
-    <p> Тип записи в файл:<select name="010_mode">
-        <OPTION value="a">a - дозаписать в файл</OPTION>
-        <OPTION value="w">w - очисить файл и записать в файл</OPTION>
-    </select></p>
+        <p> Тип записи в файл:<select name="010_mode">
+                <OPTION value="a">a - дозаписать в файл</OPTION>
+                <OPTION value="w">w - очисить файл и записать в файл</OPTION>
+            </select></p>
 
-    <input type="hidden" name="function"  value="page">
-    <input type="hidden" name="page_id"  value="3">
+        <input type="hidden" name="function" value="page">
+        <input type="hidden" name="page_id" value="3">
 
-    <p>
-        <input type="Reset"  name="Reset"  value="Обновить">
-        <input type="Submit" name="submit"  value="Отправить">
-    </p>
+        <p>
+            <input type="Reset" name="Reset" value="Обновить">
+            <input type="Submit" name="submit" value="Отправить">
+        </p>
 
-</form>
-<pre>
+    </form>
+    <pre>
 В ~/public_html/education/forms:
 
 Задание 1
@@ -76,4 +79,5 @@
 в качетве прототипа использовать ранее созданную таблицу с паспортом
 </pre>
 </body>
+
 </html>
