@@ -9,7 +9,7 @@
 
 ##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/tree/main/task_01
 
-##### Требования к контрольной работе 2 в: <br>https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
+##### Требования к контрольной работе 2 в: https://github.com/vmarshirov/g06u28/blob/main/requirements_css.md
 
 Если возникают срочная  необходимость: vmarshirov@hse.ru; телефон +79081605316   
 <!--
