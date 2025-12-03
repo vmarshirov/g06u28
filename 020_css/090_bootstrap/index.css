@@ -1,3 +1,7 @@
 .card-subtitle {
   margin-top: 1.5rem;
 }
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  body{background-color:red}
+   }
