@@ -8,7 +8,8 @@
 
 ##### Рабочая ведомость, видео, сжатые архивы и др. (2026) размещены на:https://disk.360.yandex.ru/d/JLsogZMpUKbqbQ
 
-##### https://github.com/vmarshirov/BWT_Ed - здесь лежат фрагменты с лекций
+<!--##### https://github.com/vmarshirov/BWT_Ed - здесь лежат фрагменты с лекций
+-->
 
 ##### Требования к контрольной работе 1 (с подробными пояснениями ) в:  <br>https://github.com/vmarshirov/g06u28/tree/main/task_01
 
