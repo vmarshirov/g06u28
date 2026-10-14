@@ -7,6 +7,7 @@
 -->
 
 ##### Рабочая ведомость, видео, сжатые архивы и др. (2026) размещены на:https://disk.360.yandex.ru/d/JLsogZMpUKbqbQ
+<br> Копии перечисленного выше размещены на: https://1drv.ms/f/c/fdb8e668f368a4b4/IgBREbtnqUXFRL1PdVCarI0WAf3Mp5Hn9Gg0ddE0vRzhO3Q?e=sMp0FB
 
 <!--##### https://github.com/vmarshirov/BWT_Ed - здесь лежат фрагменты с лекций
 -->
