@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -14,6 +14,7 @@
 
     <div class="container">
 
+        <!-- ШАПКА САЙТА -->
         <header class="card card-header" style="background-image: url(./images/background.jpg);">
             <div class="card-body">
                 <h3 class="card-title text-center">Live server<br>HTML CSS Support</h3>
@@ -21,20 +22,34 @@
         </header>
 
         <div class="card">
+            <!-- НАВИГАЦИЯ: активная вкладка — «Форма» -->
             <div class="card-body">
                 <ul class="nav nav-tabs">
-                    <li class="nav-item"> <a class="nav-link " href="./index.html">Первая страница</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="./shop.html">Магазин</a></li>
-                    <li class="nav-item"> <a class="nav-link active" href="./form.html">Форма</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Первая страница</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./shop.html">Магазин</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./form.html">Форма</a>
+                    </li>
                 </ul>
             </div>
 
 
-            <div class="card-body"><!--начало уникального содержания-->
-                <h5 class='card-title text-center' id='top_of _page'>Пример формы</h5>
-                <!-- <form action="https://httpbin.org/post" method='post' target="_blank"> -->
-                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+            <!-- начало уникального содержания страницы -->
+            <div class="card-body">
+                <h5 class="card-title text-center" id="top_of_page">Пример формы</h5>
+
+                <!-- Учебная форма. Метод не указан, значит GET: значения полей попадают
+                     в адресную строку (?q=search&var_01=01&...). Результат открывается
+                     в новой вкладке (target="_blank") на поиске Bing.
+                     Для просмотра того, что именно отправляется на сервер, можно временно
+                     заменить action на https://httpbin.org/post и добавить method="post".
+                     ВАЖНО: в реальных проектах пароли методом GET отправлять нельзя. -->
+                <form action="https://www.bing.com/search" id="UserEnter" name="UserEnter" target="_blank">
+                    <!-- Скрытое поле: поисковый запрос для Bing, пользователю не виден -->
                     <input type="hidden" name="q" value="search">
+
+                    <!-- Простые текстовые поля. mb-3 — отступ снизу; form-label/form-control — стили Bootstrap.
+                         Связь label→input задаётся парой for="..." / id="...".
+                         Атрибут name — имя параметра при отправке; без него поле не передаётся. -->
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Example label</label>
                         <input type="text" class="form-control" id="formGroupExampleInput"
@@ -47,15 +62,20 @@
                     </div>
 
 
-
+                    <!-- Сетка Bootstrap: .row + .col-*. g-3 — промежутки между колонками.
+                         col-md-6 — половина ширины на экранах от md, на узких — вся ширина. -->
                     <div class="row g-3">
+                        <!-- Эти поля без атрибута name в запрос не попадают — они только для демонстрации внешнего вида. -->
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <!-- type="email": браузер проверяет формат адреса -->
+                            <input type="email" class="form-control" id="inputEmail4" autocomplete="email">
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <!-- type="password": вводимые символы скрыты -->
+                            <input type="password" class="form-control" id="inputPassword4"
+                                autocomplete="current-password">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Address</label>
@@ -72,6 +92,7 @@
                         </div>
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">State</label>
+                            <!-- Выпадающий список; selected — пункт, выбранный по умолчанию -->
                             <select id="inputState" class="form-select">
                                 <option selected>Choose...</option>
                                 <option>...</option>
@@ -82,6 +103,8 @@
                             <input type="text" class="form-control" id="inputZip">
                         </div>
 
+                        <!-- Переключатели (radio): у обеих кнопок одинаковый name="radioDefault",
+                             поэтому выбрать можно только одну из них. checked — выбрана по умолчанию. -->
                         <div class="col-2">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
@@ -89,6 +112,8 @@
                                     Default radio
                                 </label>
                             </div>
+
+
                         </div>
                         <div class="col-2">
                             <div class="form-check">
@@ -101,6 +126,7 @@
                         </div>
 
 
+                        <!-- Флажок (checkbox): можно включить/выключить независимо от других -->
                         <div class="col-12">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -112,24 +138,27 @@
 
                     </div>
 
-                    <div class="col-12">
+                    <!-- Кнопка отправки формы. Отступ сверху (mt-3) отделяет её от сетки полей. -->
+                    <div class="col-12 mt-3">
                         <button type="submit" class="btn btn-primary">Отправить</button>
                     </div>
                 </form>
-            </div><!--окончание уникального содержания-->
+            </div>
+            <!-- окончание уникального содержания страницы -->
 
+
+            <!-- ПОДВАЛ САЙТА -->
+            <footer class="card card-footer">
+                <div class="card-body">
+                    <p>Footer</p>
+                </div>
+            </footer>
         </div>
 
-        <footer class="card card-footer">
-            <div class="card-body">
-                <p>Footer </p>
-            </div>
-        </footer>
-    </div>
 
-
-    <script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script crossorigin="anonymous"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
