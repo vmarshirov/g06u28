@@ -13,7 +13,7 @@ fetch("./data/program.json")
     // Меняем текст вкладки браузера (тег <title>) на название программы из JSON.
     // В program.html тега <title> нет, поэтому браузер создаёт его при присвоении.
     document.title = data.program.title;
-    // Находим на странице элемент с id="program-title" (заголовок <h3>)
+    // Находим на странице элемент с id="program-title" (заголовок <h5>)
     // и заменяем его текст названием программы.
     // textContent вставляет именно текст, а не HTML — это безопасно.
     document.querySelector("#program-title").textContent = data.program.title;
@@ -21,6 +21,10 @@ fetch("./data/program.json")
     document.querySelector("#program-description").textContent = data.program.description;
     // Находим абзац с id="program-details" (раздел «О программе») и записываем подробности.
     document.querySelector("#program-details").textContent = data.program.details;
+    // document.querySelector("#programUrl").innerHTML = `<a href="${data.program.programUrl}" target="_blank"><br>Ссылка на программу</a>`
+   document.querySelector("#programUrl").innerHTML =
+  `<a href="${data.program.programUrl}" target="_blank"><br>Ссылка на программу</a>`;
+
 
 
     // Находим контейнер с id="people-list" и целиком заменяем его внутреннее HTML-содержимое (innerHTML)
@@ -45,7 +49,7 @@ fetch("./data/program.json")
       //   <div class="card-body">               — блок с текстом карточки;
       //   <p class="card-subtitle ...">          — роль (студент, руководитель, менеджер) серым цветом
       //                                           (text-secondary);
-      //   <h3 class="card-title h5">             — ФИО; тег h3 для структуры документа,
+      //   <h5 class="card-title h5">             — ФИО; тег h5 для структуры документа,
       //                                           а класс h5 уменьшает его до размера заголовка 5 уровня;
       //   <p class="card-text small text-muted"> — примечание мелким приглушённым шрифтом;
       //   <a href="mailto:...">                  — ссылка-почта: схема mailto: открывает
@@ -56,7 +60,7 @@ fetch("./data/program.json")
             <img src="${person.photo}" class="card-img people" alt="${person.alt}">
             <div class="card-body">
               <p class="card-subtitle text-secondary">${person.role}</p>
-              <h3 class="card-title h5">${person.name}</h3>
+              <h5 class="card-title h5">${person.name}</h5>
               <p class="card-text small text-muted">${person.note}</p>
               <a href="mailto:${person.email}">${person.email}</a>
               <a href="${person.siteUrl}" target="_blank"><br>Ссылка на страницу, сайт или репозиторий</a>

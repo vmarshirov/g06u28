@@ -44,7 +44,7 @@ fetch("./data/shop.json")
         <li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
           <img style="width: 180px" class="align-self-center"
                src="${product.img}" alt="${product.title}">
-          <h5 class="card-subtitle">${product.title}</h5>
+          <h6 class="card-subtitle">${product.title}</h6>
           <p class="card-text">${product.description}. Цена ${product.price} р.</p>
           <input type="hidden" name="vendor_code" value="${product.vendor_code}">
           <p class="card-text">Заказать
