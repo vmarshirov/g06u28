@@ -22,10 +22,6 @@ fetch("./data/program.json")
     // Находим абзац с id="program-details" (раздел «О программе») и записываем подробности.
     document.querySelector("#program-details").textContent = data.program.details;
 
-    // Находим ссылку с id="student-site-link" («GitHub Pages») и задаём её адрес (href).
-    // Берём siteUrl у первого элемента массива people (индекс 0 — это студент).
-    // У руководителя и менеджера поля siteUrl в JSON нет, поэтому берётся только первый.
-    document.querySelector("#student-site-link").href = data.people[0].siteUrl;
 
     // Находим контейнер с id="people-list" и целиком заменяем его внутреннее HTML-содержимое (innerHTML)
     // на строку, которая будет получена цепочкой методов ниже.
@@ -56,13 +52,14 @@ fetch("./data/program.json")
       //                                           почтовую программу, а текст ссылки — сам адрес.
       .map(person => `
         <div class="col">
-          <div class="d-flex flex-column m-1 p-1 border bg-body">
-            <img src="${person.photo}" class="card-img" style="height: 300px; width: fit-content;" alt="${person.alt}">
+          <div class="d-flex flex-column m-1 p-1 border bg-body" style="width: min-content;">
+            <img src="${person.photo}" class="card-img people" alt="${person.alt}">
             <div class="card-body">
               <p class="card-subtitle text-secondary">${person.role}</p>
               <h3 class="card-title h5">${person.name}</h3>
               <p class="card-text small text-muted">${person.note}</p>
               <a href="mailto:${person.email}">${person.email}</a>
+              <a href="${person.siteUrl}" target="_blank"><br>Ссылка на страницу, сайт или репозиторий</a>
             </div>
           </div>
         </div>

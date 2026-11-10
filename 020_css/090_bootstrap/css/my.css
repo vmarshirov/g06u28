@@ -2,9 +2,11 @@
   margin-top: 1.5rem;
 }
 
-img.people {
-  height: 200px
-}    
+.people {
+  align-self: center;
+  height: 300px;
+  width: fit-content
+}
 
 /*
  * Демонстрация адаптивности (media query).
