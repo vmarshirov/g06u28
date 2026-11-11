@@ -8,6 +8,9 @@
   width: fit-content
 }
 
+/* a:hover {
+      background-color: rgb(70, 69, 161);
+    } */
 /*
  * Демонстрация адаптивности (media query).
  * Условие: ширина окна от 768px (md) до 1199.98px (до порога xl в Bootstrap).

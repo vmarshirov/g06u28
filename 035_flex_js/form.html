@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Форма</title>
+    <link rel="stylesheet" href="./css/my.css">
+</head>
+
+<body>
+    <!-- Шапка, навигация и подвал одинаковы на всех страницах.
+         Class="active" и aria-current отмечают текущую страницу. -->
+    <header>
+        <h5>Live server<br>HTML CSS Support</h5>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Первая страница</a></li>
+            <li><a class="active" aria-current="page" href="./form.html">Форма</a></li>
+            <li><a href="./shop.html">Магазин</a></li>
+            <li><a href="./program.html">Я и моя образовательная программа</a></li>
+        </ul>
+    </nav>
+
+    <!-- начало уникального содержания страницы -->
+    <main>
+        <h5>Пример формы</h5>
+
+        <form action="https://www.bing.com/search" target="_blank">
+            <!-- Скрытое поле: поисковый запрос для Bing, пользователю не виден -->
+            <input type="hidden" name="q" value="search">
+
+            <label>Example label
+                <input type="text" name="var_01" value="01" placeholder="Example input placeholder">
+            </label>
+            <label>Another label
+                <input type="text" name="var_02" value="02" placeholder="Another input placeholder">
+            </label>
+
+            <label>Email
+                <!-- type="email": браузер проверяет формат адреса -->
+                <input type="email" autocomplete="email">
+            </label>
+            <label>Password
+                <!-- type="password": вводимые символы скрыты -->
+                <input type="password" autocomplete="current-password">
+            </label>
+            <label>Address
+                <input type="text" placeholder="1234 Main St">
+            </label>
+            <label>City
+                <input type="text">
+            </label>
+            <label>State
+                <!-- Выпадающий список; selected — пункт, выбранный по умолчанию -->
+                <select>
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </label>
+
+            <label><input type="radio" name="radioDefault"> Default radio</label>
+            <label><input type="radio" name="radioDefault" checked> Default checked radio</label>
+
+            <label><input type="checkbox"> Check me out</label>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+
+</html>

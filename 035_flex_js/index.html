@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Первая страница — учебный сайт</title>
+    <link rel="stylesheet" href="./css/my.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h5>Live server<br>HTML CSS Support</h5>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a class="active" aria-current="page" href="./index.html">Первая страница</a></li>
+            <li><a href="./form.html">Форма</a></li>
+            <li><a href="./shop.html">Магазин</a></li>
+            <li><a href="./program.html">Я и моя образовательная программа</a></li>
+        </ul>
+    </nav>
+
+    <!-- начало уникального содержания страницы -->
+    <main>
+        <!-- id используется как якорь для ссылок «к началу страницы» -->
+        <h5 id="top_of_page">Первая страница</h5>
+
+        <!-- Ссылки-якоря: href="#id" прокручивает страницу к элементу с этим id -->
+        <a href="#section_1">На раздел 1</a>
+        <a href="#section_2">На раздел 2</a>
+
+        <h6 id="section_1">Раздел 1</h6>
+        <p>Содержание раздела 1</p>
+        <a href="#top_of_page">к началу страницы</a>
+
+        <h6 id="section_2">Раздел 2</h6>
+        <p>Содержание раздела 2</p>
+        <a href="#top_of_page">к началу страницы</a>
+    </main>
+    <!-- окончание уникального содержания страницы -->
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</div>	
+</body>
+
+</html>

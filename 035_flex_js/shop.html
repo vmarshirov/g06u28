@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="./css/my.css">
+</head>
+
+<body>
+    <!-- Шапка, навигация и подвал одинаковы на всех страницах.
+         Class="active" и aria-current отмечают текущую страницу. -->
+    <header>
+        <h5>Live server<br>HTML CSS Support</h5>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Первая страница</a></li>
+            <li><a href="./form.html">Форма</a></li>
+            <li><a class="active" aria-current="page" href="./shop.html">Магазин</a></li>
+            <li><a href="./program.html">Я и моя образовательная программа</a></li>
+        </ul>
+    </nav>
+
+    <!-- начало уникального содержания страницы -->
+    <main>
+        <h5>Магазин</h5>
+
+        <!-- Учебная форма «корзины»: данные уходят методом GET на поиск Bing в новой вкладке,
+             чтобы можно было увидеть параметры запроса: q, vendor_code, amount. -->
+        <form action="https://www.bing.com/search" target="_blank">
+            <input type="hidden" name="q" value="search">
+
+            <!-- Карточки товаров создаёт js/shop.js из data/shop.json -->
+            <ul id="node_for_insert"></ul>
+
+            <input type="submit" value="В корзину">
+        </form>
+    </main>
+    <!-- окончание уникального содержания страницы -->
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <script src="./js/shop.js" defer></script>
+</body>
+
+</html>

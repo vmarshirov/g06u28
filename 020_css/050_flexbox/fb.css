@@ -122,15 +122,15 @@ button {
 
 /* Группа кнопок как flex-контейнер (отключено — раскомментируйте для эксперимента).
    row-reverse — обратный порядок, wrap — перенос строк, flex-end — к правому краю, flex-start — к верху */
-/*
+
 .button_flex {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:column-reverse;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: flex-start;
 }
-*/
+
 
 /* Эффект увеличения картинки при наведении (отключено) */
 /*
