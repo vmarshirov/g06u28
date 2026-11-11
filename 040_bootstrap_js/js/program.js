@@ -60,8 +60,8 @@ fetch("./data/program.json")
             <img src="${person.photo}" class="card-img people" alt="${person.alt}">
             <div class="card-body">
               <p class="card-subtitle text-secondary">${person.role}</p>
-              <h5 class="card-title h5">${person.name}</h5>
-              <p class="card-text small text-muted">${person.note}</p>
+              <h6 class="card-title">${person.name}</h6>
+              <p class="card-text ">${person.note}</p>
               <a href="mailto:${person.email}">${person.email}</a>
               <a href="${person.siteUrl}" target="_blank"><br>Ссылка на страницу, сайт или репозиторий</a>
             </div>
