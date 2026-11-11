@@ -21,11 +21,11 @@ fetch("./data/program.json")
     document.querySelector("#program-description").textContent = data.program.description;
     // Находим абзац с id="program-details" (раздел «О программе») и записываем подробности.
     document.querySelector("#program-details").textContent = data.program.details;
+    // document.querySelector("#programUrl").innerHTML = `<a href="${data.program.programUrl}" target="_blank"><br>Ссылка на программу</a>`
+   document.querySelector("#programUrl").innerHTML =
+  `<a href="${data.program.programUrl}" target="_blank"><br>Ссылка на программу</a>`;
 
-    // Находим ссылку с id="student-site-link" («GitHub Pages») и задаём её адрес (href).
-    // Берём siteUrl у первого элемента массива people (индекс 0 — это студент).
-    // У руководителя и менеджера поля siteUrl в JSON нет, поэтому берётся только первый.
-    document.querySelector("#student-site-link").href = data.people[0].siteUrl;
+
 
     // Находим контейнер с id="people-list" и целиком заменяем его внутреннее HTML-содержимое (innerHTML)
     // на строку, которая будет получена цепочкой методов ниже.
@@ -56,13 +56,14 @@ fetch("./data/program.json")
       //                                           почтовую программу, а текст ссылки — сам адрес.
       .map(person => `
         <div class="col">
-          <div class="d-flex flex-column m-1 p-1 border bg-body">
-            <img src="${person.photo}" class="card-img" style="height: 300px; width: fit-content;" alt="${person.alt}">
+          <div class="d-flex flex-column m-1 p-1 border bg-body" style="width: min-content;">
+            <img src="${person.photo}" class="card-img people" alt="${person.alt}">
             <div class="card-body">
               <p class="card-subtitle text-secondary">${person.role}</p>
-              <h5 class="card-title h5">${person.name}</h5>
-              <p class="card-text small text-muted">${person.note}</p>
+              <h6 class="card-title">${person.name}</h6>
+              <p class="card-text ">${person.note}</p>
               <a href="mailto:${person.email}">${person.email}</a>
+              <a href="${person.siteUrl}" target="_blank"><br>Ссылка на страницу, сайт или репозиторий</a>
             </div>
           </div>
         </div>
@@ -70,6 +71,7 @@ fetch("./data/program.json")
       // Метод join("") склеивает массив строк-карточек в одну строку без разделителя.
       // Без join() элементы массива при присвоении в innerHTML были бы разделены запятыми.
       .join("");
+      
   });
 // Конец цепочки. Обратите внимание: блока .catch() здесь нет, поэтому при ошибке загрузки
 // (например, файл не найден или страница открыта через file:// без сервера)

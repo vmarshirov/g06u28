@@ -20,36 +20,20 @@ fetch("./data/shop.json")
       // Если нужно показать только 9, перед .map() добавьте .slice(0, 9).
       // Внутри шаблонной строки (между обратными кавычками) нельзя использовать //-комментарии:
       // они стали бы частью HTML. Поэтому пояснение разметки дано здесь:
-      //   <li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
-      //        — карточка товара: элемент списка шириной 210px; Bootstrap-классы:
-      //          d-flex flex-column — flex-контейнер с вертикальным расположением,
-      //          m-1 — внешний отступ, p-1 — внутренний отступ,
-      //          border — рамка, bg-body — фон страницы;
-      //   <img style="width: 180px" class="align-self-center" src="${product.img}" alt="${product.title}">
-      //        — картинка товара шириной 180px, по центру (align-self-center);
-      //          src берётся из поля img, alt — из названия товара;
-      //   <h5 class="card-subtitle">${product.title}</h5>
-      //        — название товара;
-      //   <p class="card-text">${product.description}. Цена ${product.price} р.</p>
-      //        — описание и цена в одной строке;
-      //   <input type="hidden" name="vendor_code" value="${product.vendor_code}">
-      //        — скрытое поле с артикулом: пользователь его не видит, но при отправке формы
-      //          оно уйдёт на сервер как параметр vendor_code;
-      //   <p class="card-text">Заказать
-      //        — подпись к полю количества;
-      //   <input class="w-25" type="number" name="amount" value="0" min="0">
-      //        — поле ввода количества: число, по умолчанию 0, меньше 0 ввести нельзя (min="0"),
-      //          ширина 25% (w-25), параметр при отправке формы называется amount.
+      // Классы не нужны: вид карточек задан в css/my.css селекторами по id (#node_for_insert li и т. д.).
+      //   <li>                   — карточка товара;
+      //   <img>                  — картинка: src из поля img, alt из названия товара;
+      //   <h6>                   — название товара;
+      //   <p>                    — описание и цена;
+      //   <input type="hidden">  — артикул: не виден, но уходит на сервер как vendor_code;
+      //   <input type="number">  — количество (параметр amount), не меньше 0 (min="0").
       .map(product => `
-        <li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
-          <img style="width: 180px" class="align-self-center"
-               src="${product.img}" alt="${product.title}">
-          <h5 class="card-subtitle">${product.title}</h5>
-          <p class="card-text">${product.description}. Цена ${product.price} р.</p>
+        <li>
+          <img src="${product.img}" alt="${product.title}">
+          <h6>${product.title}</h6>
+          <p class="margin_01rem">${product.description}. Цена ${product.price} р.</p>
           <input type="hidden" name="vendor_code" value="${product.vendor_code}">
-          <p class="card-text">Заказать
-            <input class="w-25" type="number" name="amount" value="0" min="0">
-          </p>
+          <p class="margin_01rem">Заказать <input type="number" name="amount" value="0" min="0"></p>
         </li>
       `)
       // Объединяем HTML-код всех карточек в одну строку.

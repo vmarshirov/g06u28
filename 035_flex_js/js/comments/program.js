@@ -10,8 +10,12 @@ fetch("./data/program.json")
   // вида { program: {...}, people: [ {...}, {...}, {...} ] }.
   // Именно здесь мы подставляем данные в страницу.
   .then(data => {
+    // Отладочный вывод в консоль браузера (F12): объект с данными о программе.
+    console.log(data.program)
+    // Отладочный вывод в консоль браузера: массив участников программы.
+    console.log(data.people)
     // Меняем текст вкладки браузера (тег <title>) на название программы из JSON.
-    // В program.html тега <title> нет, поэтому браузер создаёт его при присвоении.
+    // В program.html тег <title> уже есть, присваивание заменяет его текст.
     document.title = data.program.title;
     // Находим на странице элемент с id="program-title" (заголовок <h5>)
     // и заменяем его текст названием программы.
@@ -19,13 +23,15 @@ fetch("./data/program.json")
     document.querySelector("#program-title").textContent = data.program.title;
     // Находим абзац с id="program-description" и записываем в него краткое описание программы.
     document.querySelector("#program-description").textContent = data.program.description;
-    // Находим абзац с id="program-details" (раздел «О программе») и записываем подробности.
+    // Находим элемент с id="program-details" (раздел «О программе») и записываем подробности.
     document.querySelector("#program-details").textContent = data.program.details;
-
-    // Находим ссылку с id="student-site-link" («GitHub Pages») и задаём её адрес (href).
-    // Берём siteUrl у первого элемента массива people (индекс 0 — это студент).
-    // У руководителя и менеджера поля siteUrl в JSON нет, поэтому берётся только первый.
-    document.querySelector("#student-site-link").href = data.people[0].siteUrl;
+    // Закомментированный прежний вариант: ссылка с текстом «Ссылка на программу».
+    // document.querySelector("#programUrl").innerHTML = `<a href="${data.program.programUrl}" target="_blank"><br>Ссылка на программу</a>`
+    // Находим элемент с id="programUrl" и вставляем в него ссылку на страницу программы.
+    // href берётся из поля programUrl в JSON; target="_blank" открывает ссылку в новой вкладке;
+    // <br> переносит ссылку на новую строку; текстом ссылки служит сам адрес.
+    document.querySelector("#programUrl").innerHTML =
+      `<a href="${data.program.programUrl}" target="_blank"><br>${data.program.programUrl}</a>`;
 
     // Находим контейнер с id="people-list" и целиком заменяем его внутреннее HTML-содержимое (innerHTML)
     // на строку, которая будет получена цепочкой методов ниже.
@@ -35,43 +41,32 @@ fetch("./data/program.json")
       // В результате получается новый массив строк, а не один текст.
       // Обратные кавычки ` ` задают шаблонную строку: она может быть многострочной,
       // а конструкция ${...} подставляет в неё значение выражения JavaScript.
-      // Внутри шаблонной строки нельзя писать // комментарии (они попали бы в HTML),
-      // поэтому построчное пояснение разметки дано здесь:
-      //   <div class="col">                     — внешняя колонка-обёртка одной карточки;
-      //   <div class="d-flex flex-column ...">  — сама карточка: flex-колонка (d-flex flex-column),
-      //                                           внешние/внутренние отступы m-1 p-1,
-      //                                           рамка border и фон bg-body;
-      //   <img src="${person.photo}" ...>       — фото: путь берётся из поля photo;
-      //                                           style задаёт высоту 300px и ширину по содержимому
-      //                                           (width: fit-content), класс card-img — стиль Bootstrap;
-      //                                           alt="${person.alt}" — описание картинки для
-      //                                           экранных чтецов и на случай, если фото не загрузится;
-      //   <div class="card-body">               — блок с текстом карточки;
-      //   <p class="card-subtitle ...">          — роль (студент, руководитель, менеджер) серым цветом
-      //                                           (text-secondary);
-      //   <h5 class="card-title h5">             — ФИО; тег h5 для структуры документа,
-      //                                           а класс h5 уменьшает его до размера заголовка 5 уровня;
-      //   <p class="card-text small text-muted"> — примечание мелким приглушённым шрифтом;
-      //   <a href="mailto:...">                  — ссылка-почта: схема mailto: открывает
-      //                                           почтовую программу, а текст ссылки — сам адрес.
+      // Внутри шаблонной строки нельзя писать // комментарии, поэтому пояснение здесь.
+      // Bootstrap-классы не используются: вид карточек задан в css/my.css
+      // селекторами по id (#people-list > div, #people-list img) и классом .margin_01rem.
+      //   <div>                 — карточка участника;
+      //   <img>                 — фото: src из поля photo, alt — описание для экранных чтецов;
+      //   <p class="margin_01rem"> — роль (первый абзац) и примечание (второй абзац);
+      //                              класс margin_01rem задаёт отступ абзаца;
+      //   <h6>                  — ФИО;
+      //   <a href="mailto:...">  — почта: схема mailto: открывает почтовую программу;
+      //   <a href="${person.siteUrl}" target="_blank"> — ссылка на страницу, сайт или репозиторий
+      //                              из поля siteUrl; открывается в новой вкладке.
       .map(person => `
-        <div class="col">
-          <div class="d-flex flex-column m-1 p-1 border bg-body">
-            <img src="${person.photo}" class="card-img" style="height: 300px; width: fit-content;" alt="${person.alt}">
-            <div class="card-body">
-              <p class="card-subtitle text-secondary">${person.role}</p>
-              <h5 class="card-title h5">${person.name}</h5>
-              <p class="card-text small text-muted">${person.note}</p>
-              <a href="mailto:${person.email}">${person.email}</a>
-            </div>
-          </div>
+        <div>
+          <img src="${person.photo}" alt="${person.alt}">
+          <p class="margin_01rem">${person.role}</p>
+          <h6>${person.name}</h6>
+          <p class="margin_01rem">${person.note}</p>
+          <a href="mailto:${person.email}">${person.email}</a>
+          <a href="${person.siteUrl}" target="_blank">Ссылка на страницу, сайт или репозиторий</a>
         </div>
       `)
       // Метод join("") склеивает массив строк-карточек в одну строку без разделителя.
       // Без join() элементы массива при присвоении в innerHTML были бы разделены запятыми.
       .join("");
-  });
-// Конец цепочки. Обратите внимание: блока .catch() здесь нет, поэтому при ошибке загрузки
-// (например, файл не найден или страница открыта через file:// без сервера)
-// страница останется с пустыми полями, а ошибка появится только в консоли браузера.
-// Для сравнения: в shop.js обработчик ошибки .catch() есть.
+  })
+  // Если загрузить файл или обработать данные не удалось, выводим ошибку в консоль.
+  // .catch() ловит ошибки любого предыдущего шага цепочки:
+  // сетевой сбой, отсутствие файла, некорректный JSON, отсутствие нужного элемента на странице.
+  .catch(error => console.error("Не удалось загрузить данные о программе:", error));
