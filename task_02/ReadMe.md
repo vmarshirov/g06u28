@@ -24,7 +24,7 @@
 
 11-12. Адаптивная верстка сайта и его страниц, обеспечивающая корректное отображение сайта на всех устройствах (десктоп, планшет, смартфон). 
 
-#### Примеры: <br> https://vmarshirov.github.io/g06u28/035_flex_js/  <br> https://vmarshirov.github.io/g06u28/040_bootstrap_js
+#### Примеры: <br>https://vmarshirov.github.io/g06u28/035_flex_js/  <br>https://vmarshirov.github.io/g06u28/040_bootstrap_js
 
 #### Защита контрольной работы 09 декабря 
   
