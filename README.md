@@ -16,8 +16,6 @@
 
 ##### Требования к контрольной работе 2 в: <br>https://github.com/vmarshirov/g06u28/blob/main/task_02/ReadMe.md
 
-https://vmarshirov.github.io/g06u28/task_02
-
 Если возникают срочная  необходимость: vmarshirov@hse.ru; телефон +79081605316   
 <!--
 #### Пресдачи 2025-02-05
