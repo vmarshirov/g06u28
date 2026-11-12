@@ -58,14 +58,15 @@ parent {
 
 /* ---------- 3. Flexbox: элементы ---------- */
 child {
+    width: 15.0rem;
     border: 4px solid;
     padding: 10px;
     margin: 20px;
     background: aqua;
-    width: 15.0rem;
+   
           /* flex-basis — начальный размер вдоль главной оси (аналог width при row).
        Если задан flex-basis, то width игнорируется. */
-        flex-basis: 15.0rem;
+      flex-basis: 15.0rem;
     /* базовая ширина карточки */
 
     /* Чтобы центрировать элемент и по горизонтали, и по вертикали:
