@@ -4,6 +4,7 @@ fetch("./data/shop.json")
   .then(response => response.json())
   // После загрузки данных создаём HTML-карточки товаров.
   .then(data => {
+    console.log(data)
     // Находим список на странице shop.html, в который нужно добавить товары.
     // Это <ul id="node_for_insert">; присваивая innerHTML, мы заменяем его содержимое
     // на HTML-строку, которую соберёт цепочка методов ниже.

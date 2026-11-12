@@ -1,23 +1,18 @@
 * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0 auto;
-  padding: 0 1rem;
-  line-height: 1.5;
-}
-
-
-h6 {
-font-size: 1.0rem;
-margin: 0.1rem;  
+  margin: 0.2rem;
 }
 
 h5 {
   font-size: 1.2rem;
   text-align: center;
 }
+
+h6 {
+font-size: 1.0rem;
+margin: 0.1rem;  
+}
+
+
 
 header,
 nav,
@@ -33,6 +28,13 @@ header {
 }
 
 
+/* Ссылки */
+
+a{color: rgb(0, 174, 255);}
+.active {
+  background-color: #ddd;
+}
+
 /* Навигация */
 nav ul {
   display: flex;
@@ -42,15 +44,12 @@ nav ul {
   list-style: none;
 }
 
-nav a {
+ul a {
   display: block;
-  padding: .5rem 1rem;
+  padding: .5rem;
   border: 1px solid #ccc;
 }
 
-nav a.active {
-  background-color: #ddd;
-}
 
 /* Формы */
 label {
@@ -63,11 +62,11 @@ input[type="email"],
 input[type="password"],
 select {
   display: block;
-  width: 90%;
+  width: 80%;
   padding: .3rem;
 }
 
-/* Карточки товаров (#node_for_insert)*/
+/* Товары (#node_for_insert)*/
 #node_for_insert{
   display: flex;
   flex-direction: row;
@@ -95,7 +94,7 @@ select {
 
 
 
-/* Карточки участников (#people-list) */
+/* Участники (#people-list) */
 #people-list {
   display: flex;
   flex-wrap: wrap;

@@ -1,10 +1,12 @@
-// Загружаем данные о товарах из файла shop.json.
+// Запрашиваем и загружаем данные о товарах из файла shop.json.
 fetch("./data/shop.json")
   .then(response => response.json())
-  // После загрузки данных создаём HTML-карточки товаров.
   // Параметр data — массив объектов-товаров (сейчас в shop.json их 11),
   .then(data => {
-    // Находим список на странице shop.html, в который нужно добавить товары.
+    console.table(data)
+    console.log(data.map(abc => abc.title))
+    console.log(data.map(abc => abc.title).join(""))
+    // Находим фрагмент на странице shop.html, в который нужно добавить товары.
     document.querySelector("#node_for_insert").innerHTML = data
       .map(product => `
         <li>
@@ -15,7 +17,7 @@ fetch("./data/shop.json")
           <p class="margin_01rem">Заказать <input type="number" name="amount" value="0" min="0"></p>
         </li>
       `)
-      // Объединяем HTML-код всех карточек в одну строку.
+      // Объединяем массив в одну строку (и убираем запятые).
       .join("");
   })
   // Если загрузить файл или обработать данные не удалось, выводим ошибку в консоль.
