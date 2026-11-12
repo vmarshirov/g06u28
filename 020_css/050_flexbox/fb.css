@@ -14,11 +14,10 @@ body {
 
 
 /* Заголовки по центру, без внешних отступов */
-h1,
-h2 {
+h2,h3 {
+    display: block;
     text-align: center;
-    margin: 0;
-}
+    }
 
 img {
     width: 70px;
