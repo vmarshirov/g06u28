@@ -58,7 +58,7 @@ parent {
 
 /* ---------- 3. Flexbox: элементы ---------- */
 child {
-    min-height: 10.0rem;
+    min-height: 27.0rem;
     width: 12.0rem;
     border: 4px solid;
     padding: 5px;
@@ -71,7 +71,7 @@ child {
 
 /* Демонстрация order и align-self */
 .order_align-self {
-    min-height:15.0rem;
+    min-height:12.0rem;
     /* order — порядок элемента в ряду. Чем меньше число, тем левее элемент
        (по умолчанию 0; допустимы отрицательные значения). Пример: order: 1 — уедет в конец. */
     order: 0;
@@ -83,15 +83,19 @@ child {
 
 /* Демонстрация flex-grow / flex-shrink */
 .basis_grow_shrink {
-    min-height: 28.0rem;
+    min-height: 20.0rem;
     flex-grow: 0;
     /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
     flex-shrink: 0;
     /* 0 — не сжиматься, даже если места не хватает (возможна горизонтальная прокрутка);
                         1 — сжиматься при нехватке места */
+}
 
-    /* Эти три свойства можно записать одним: flex: <grow> <shrink> <basis>;
-       например, flex: 0 0 350px; */
+.child_flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 
@@ -105,96 +109,9 @@ button {
 
 .button_flex {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
-
-/* Эффект увеличения картинки при наведении (отключено) */
-/*
-img:hover {
-    width: 400px;
-    height: 400px;
-}
-*/
-
-
-/* ---------- 3. Flexbox: контейнер ---------- */
-section {
-    background-color: var(--color-section);
-    min-height: 500px;
-    /* высота нужна, чтобы align-items было заметно */
-
-    display: flex;
-    /* включаем flex-режим: потомки становятся flex-элементами */
-
-    /* --- Главная ось (по умолчанию горизонтальная) --- */
-    flex-direction: row;
-    /* направление: row | row-reverse | column | column-reverse */
-    flex-wrap: nowrap;
-    /* перенос: nowrap | wrap | wrap-reverse */
-    justify-content: flex-start;
-    /* выравнивание вдоль главной оси:
-                                    flex-start | flex-end | center | space-between | space-around | space-evenly */
-
-    /* --- Поперечная ось (по умолчанию вертикальная) --- */
-    align-items: flex-end;
-    /* выравнивание всех элементов поперёк:
-                                    flex-start | flex-end | center | stretch | baseline */
-}
-
-
-/* ---------- 4. Flexbox: элементы ---------- */
-article {
-    border: 4px solid;
-    padding: 10px;
-    margin: 20px;
-    min-height: 10.0rem
-    background: var(--color-article);
-    /* Чтобы центрировать элемент и по горизонтали, и по вертикали:       margin: auto; */
-}
-
-/* Демонстрация order и align-self */
-.order_align-self {
-    min-height: 10.0rem
-    /* order — порядок элемента в ряду. Чем меньше число, тем левее элемент
-       (по умолчанию 0; допустимы отрицательные значения). Пример: order: 1 — уедет в конец. */
-    order: 0;
-
-    /* align-self — переопределяет align-items контейнера для одного элемента:
-       auto | flex-start | flex-end | center | stretch | baseline */
-    align-self: flex-end;
-}
-
-/* Демонстрация flex-grow / flex-shrink */
-.basis_grow_shrink {
-    flex-grow: 0;
-    /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
-    flex-shrink: 0;
-    /* 0 — не сжиматься, даже если места не хватает (возможна горизонтальная прокрутка);
- 1 — сжиматься при нехватке места */
-
-    /* Эти три свойства можно записать одним: flex: <grow> <shrink> <basis>;
-       например, flex: 0 0 350px; */
-}
-
-
-/* ---------- 5. Дополнительно: кнопки ---------- */
-button {
-    margin: 1rem;
-}
-
-/* Группа кнопок как flex-контейнер (отключено — раскомментируйте для эксперимента).
-   row-reverse — обратный порядок, wrap — перенос строк, flex-end — к правому краю, flex-start — к верху */
-
-.button_flex {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: flex-start;    align-items: flex-start;
 }
 
 
