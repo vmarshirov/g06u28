@@ -34,7 +34,7 @@ img {
 parent {
     background-color: rgb(228, 223, 223);
     margin: auto;
-    min-height: 30.0rem;
+    min-height: 35.0rem;
     /* высота нужна, чтобы align-items было заметно */
     overflow: auto;
     display: flex;
@@ -58,23 +58,20 @@ parent {
 
 /* ---------- 3. Flexbox: элементы ---------- */
 child {
-    width: 15.0rem;
+    min-height: 10.0rem;
+    width: 12.0rem;
     border: 4px solid;
-    padding: 10px;
-    margin: 20px;
-    background: aqua;
-   
+    padding: 5px;
+    margin: 10px;
+    background: #48c9c9;   
           /* flex-basis — начальный размер вдоль главной оси (аналог width при row).
-       Если задан flex-basis, то width игнорируется. */
-      flex-basis: 15.0rem;
-    /* базовая ширина карточки */
-
     /* Чтобы центрировать элемент и по горизонтали, и по вертикали:
        margin: auto; */
 }
 
 /* Демонстрация order и align-self */
 .order_align-self {
+    min-height:15.0rem;
     /* order — порядок элемента в ряду. Чем меньше число, тем левее элемент
        (по умолчанию 0; допустимы отрицательные значения). Пример: order: 1 — уедет в конец. */
     order: 0;
@@ -86,6 +83,7 @@ child {
 
 /* Демонстрация flex-grow / flex-shrink */
 .basis_grow_shrink {
+    min-height: 28.0rem;
     flex-grow: 0;
     /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
     flex-shrink: 0;
@@ -153,18 +151,14 @@ article {
     border: 4px solid;
     padding: 10px;
     margin: 20px;
+    min-height: 10.0rem
     background: var(--color-article);
-
-    /* flex-basis — начальный размер вдоль главной оси (аналог width при row).
-       Если задан flex-basis, то width игнорируется. */
-    flex-basis: var(--article-basis);
-
-    /* Чтобы центрировать элемент и по горизонтали, и по вертикали:
-       margin: auto; */
+    /* Чтобы центрировать элемент и по горизонтали, и по вертикали:       margin: auto; */
 }
 
 /* Демонстрация order и align-self */
 .order_align-self {
+    min-height: 10.0rem
     /* order — порядок элемента в ряду. Чем меньше число, тем левее элемент
        (по умолчанию 0; допустимы отрицательные значения). Пример: order: 1 — уедет в конец. */
     order: 0;
@@ -180,7 +174,7 @@ article {
     /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
     flex-shrink: 0;
     /* 0 — не сжиматься, даже если места не хватает (возможна горизонтальная прокрутка);
-                        1 — сжиматься при нехватке места */
+ 1 — сжиматься при нехватке места */
 
     /* Эти три свойства можно записать одним: flex: <grow> <shrink> <basis>;
        например, flex: 0 0 350px; */
