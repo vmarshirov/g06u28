@@ -1,46 +1,17 @@
-/* ==========================================================================
-   Учебный пример: Flexbox
-   Структура файла:
-     1. Переменные (цвета и размеры)
-     2. Базовые стили страницы
-     3. Flexbox: контейнер (section)
-     4. Flexbox: элементы (article)
-     5. Дополнительно: кнопки
-   ========================================================================== */
-
-
-/* ---------- 1. Переменные ---------- */
-:root {
-    --color-page: rgba(250, 220, 150, 0.78);  /* фон страницы */
-    --color-header: purple;                   /* фон шапки */
-    --color-section: brown;                   /* фон flex-контейнера */
-    --color-article: aqua;                    /* фон карточек */
-    --color-img: blue;                        /* фон картинок-заглушек */
-    --article-basis: 350px;                   /* базовая ширина карточки */
-}
-
-/* border-box: width/height включают padding и border — размеры проще считать */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+* {
+    border: 1px solid;
+    margin: 2px;
+    padding: 2px;
+    /* box-sizing: border-box; */
 }
 
 
-/* ---------- 2. Базовые стили страницы ---------- */
+/* ---------- 1. Базовые стили страницы ---------- */
 body {
-    /* Ограничиваем ширину и центрируем блок по горизонтали */
-    max-width: 1600px;
-    margin: 0 auto;              /* вместо margin-left/right: auto */
-    padding: 0 10px;             /* вместо padding-left/right */
-    background-color: var(--color-page);
-    font-size: 14px;
+    margin: auto;
+    font-size: 12px;
 }
 
-header {
-    background: var(--color-header);
-    height: 2rem;
-}
 
 /* Заголовки по центру, без внешних отступов */
 h1,
@@ -53,27 +24,127 @@ img {
     width: 70px;
     height: 30px;
     border: 8px solid;
-    margin: 18px;
+    margin: 14px;
     padding: 5px;
     background-color: red;
 }
 
 
-/* ---------- 3. Flexbox: контейнер ---------- */
-section {
-    background-color: var(--color-section);
-    min-height: 500px;           /* высота нужна, чтобы align-items было заметно */
-
-    display: flex;               /* включаем flex-режим: потомки становятся flex-элементами */
+/* ---------- 2. Flexbox: контейнер ---------- */
+parent {
+    background-color: rgb(228, 223, 223);
+    /* фон flex-контейнера */
+    width: 900px;
+     margin: auto;
+    min-height: 500px;
+    /* высота нужна, чтобы align-items было заметно */
+    overflow: auto;
+    display: flex;
+    /* включаем flex-режим: потомки становятся flex-элементами */
 
     /* --- Главная ось (по умолчанию горизонтальная) --- */
-    flex-direction: row;         /* направление: row | row-reverse | column | column-reverse */
-    flex-wrap: nowrap;           /* перенос: nowrap | wrap | wrap-reverse */
-    justify-content: flex-start; /* выравнивание вдоль главной оси:
+    flex-direction: row;
+    /* направление: row | row-reverse | column | column-reverse */
+    flex-wrap: nowrap;
+    /* перенос: nowrap | wrap | wrap-reverse */
+    justify-content: flex-start;
+    /* выравнивание вдоль главной оси:
                                     flex-start | flex-end | center | space-between | space-around | space-evenly */
 
     /* --- Поперечная ось (по умолчанию вертикальная) --- */
-    align-items: flex-end;       /* выравнивание всех элементов поперёк:
+    align-items: flex-end;
+    /* выравнивание всех элементов поперёк:
+                                    flex-start | flex-end | center | stretch | baseline */
+}
+
+
+/* ---------- 3. Flexbox: элементы ---------- */
+child {
+    border: 4px solid;
+    padding: 10px;
+    margin: 20px;
+    background: aqua;
+    width: 20.0rem;
+          /* flex-basis — начальный размер вдоль главной оси (аналог width при row).
+       Если задан flex-basis, то width игнорируется. */
+        flex-basis: 20.0rem;
+    /* базовая ширина карточки */
+
+    /* Чтобы центрировать элемент и по горизонтали, и по вертикали:
+       margin: auto; */
+}
+
+/* Демонстрация order и align-self */
+.order_align-self {
+    /* order — порядок элемента в ряду. Чем меньше число, тем левее элемент
+       (по умолчанию 0; допустимы отрицательные значения). Пример: order: 1 — уедет в конец. */
+    order: 0;
+
+    /* align-self — переопределяет align-items контейнера для одного элемента:
+       auto | flex-start | flex-end | center | stretch | baseline */
+    align-self: flex-end;
+}
+
+/* Демонстрация flex-grow / flex-shrink */
+.basis_grow_shrink {
+    flex-grow: 0;
+    /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
+    flex-shrink: 0;
+    /* 0 — не сжиматься, даже если места не хватает (возможна горизонтальная прокрутка);
+                        1 — сжиматься при нехватке места */
+
+    /* Эти три свойства можно записать одним: flex: <grow> <shrink> <basis>;
+       например, flex: 0 0 350px; */
+}
+
+
+/* ---------- 4. Дополнительно: кнопки ---------- */
+button {
+    margin: 1rem;
+}
+
+/* Группа кнопок как flex-контейнер (отключено — раскомментируйте для эксперимента).
+   row-reverse — обратный порядок, wrap — перенос строк, flex-end — к правому краю, flex-start — к верху */
+
+.button_flex {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+/* Эффект увеличения картинки при наведении (отключено) */
+/*
+img:hover {
+    width: 400px;
+    height: 400px;
+}
+*/
+
+
+/* ---------- 3. Flexbox: контейнер ---------- */
+section {
+    background-color: var(--color-section);
+    min-height: 500px;
+    /* высота нужна, чтобы align-items было заметно */
+
+    display: flex;
+    /* включаем flex-режим: потомки становятся flex-элементами */
+
+    /* --- Главная ось (по умолчанию горизонтальная) --- */
+    flex-direction: row;
+    /* направление: row | row-reverse | column | column-reverse */
+    flex-wrap: nowrap;
+    /* перенос: nowrap | wrap | wrap-reverse */
+    justify-content: flex-start;
+    /* выравнивание вдоль главной оси:
+                                    flex-start | flex-end | center | space-between | space-around | space-evenly */
+
+    /* --- Поперечная ось (по умолчанию вертикальная) --- */
+    align-items: flex-end;
+    /* выравнивание всех элементов поперёк:
                                     flex-start | flex-end | center | stretch | baseline */
 }
 
@@ -106,8 +177,10 @@ article {
 
 /* Демонстрация flex-grow / flex-shrink */
 .basis_grow_shrink {
-    flex-grow: 0;    /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
-    flex-shrink: 0;  /* 0 — не сжиматься, даже если места не хватает (возможна горизонтальная прокрутка);
+    flex-grow: 0;
+    /* 0 — не растягиваться; 1 и больше — занять свободное место пропорционально */
+    flex-shrink: 0;
+    /* 0 — не сжиматься, даже если места не хватает (возможна горизонтальная прокрутка);
                         1 — сжиматься при нехватке места */
 
     /* Эти три свойства можно записать одним: flex: <grow> <shrink> <basis>;
@@ -125,7 +198,7 @@ button {
 
 .button_flex {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: flex-start;

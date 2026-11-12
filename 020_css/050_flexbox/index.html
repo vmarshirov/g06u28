@@ -5,44 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flexbox example</title>
-    <!-- Подключение таблицы стилей (type="text/css" в HTML5 указывать не нужно) -->
     <link href="./fb.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Flexbox</h1>
-    </header>
 
-    <!-- section — flex-контейнер; три article внутри — flex-элементы -->
-    <section>
-
-        <!-- Демонстрация свойств order и align-self (см. класс .order_align-self в CSS) -->
-        <article class="order_align-self">
+    <parent >
+        <child class="order_align-self" style="min-height: 10.0rem;">
             <h2>Заголовок 1 (.order_align-self)</h2>
             <img src="" alt="">
             <p>Содержание параграфа. Содержание параграфа. Содержание параграфа.</p>
-        </article>
+        </child>
 
-        <!-- Демонстрация flex-basis / flex-grow / flex-shrink (см. класс .basis_grow_shrink) -->
-        <article class="basis_grow_shrink">
+        <child class="basis_grow_shrink" style="min-height: 15.0rem;">
             <h2>Заголовок 2 (.basis_grow_shrink)</h2>
             <img src="" alt="">
-            <p>Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание
-                параграфа.
-            </p>
-        </article>
+            <p>Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание параграфа. Содержание </p>
+        </child>
 
-        <!-- Третий блок: пример вложенного контента и группы кнопок -->
-        <article>
+        <child style="min-height: 25.0rem;">
             <h2>Заголовок 3</h2>
-            <!-- Чтобы кнопки выстроились по flex-правилам, раскомментируйте .button_flex в CSS -->
+            <!-- Чтобы кнопки выстроились по flex-правилам, раскомментировать .button_flex в CSS -->
             <div class="button_flex">
                 <button type="button">1</button>
                 <button type="button">2</button>
                 <button type="button">3</button>
-                <button type="button">4</button>
-                <button type="button">5</button>
             </div>
             <div>
                 <img src="" alt="">
@@ -51,9 +38,9 @@
             <div>
                 <p>Содержание параграфа. Содержание параграфа</p>
             </div>
-        </article>
+        </child>
 
-    </section>
+    </parent>
 
 </body>
 
