@@ -4,8 +4,8 @@ fetch("./data/shop.json")
   // Параметр data — массив объектов-товаров (сейчас в shop.json их 11),
   .then(data => {
     console.table(data)
-    console.log(data.map(abc => abc.title))
-    console.log(data.map(abc => abc.title).join(""))
+    console.table(data.map(abc => abc.title))
+    console.table(data.map(abc => abc.title).join(""))
     // Находим фрагмент на странице shop.html, в который нужно добавить товары.
     document.querySelector("#node_for_insert").innerHTML = data
       .map(product => `
