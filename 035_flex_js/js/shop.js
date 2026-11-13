@@ -3,9 +3,10 @@ fetch("./data/shop.json")
   .then(response => response.json())
   // Параметр data — массив объектов-товаров (сейчас в shop.json их 11),
   .then(data => {
-    console.table(data)
-    console.table(data.map(abc => abc.title))
-    console.table(data.map(abc => abc.title).join(""))
+    console.log(data)
+    console.log(data.map(abc => abc.title))
+    console.log(data.map(abc => abc.title + abc.price).join())
+    console.log(data.map(abc => abc.title + abc.price).join(""))
     // Находим фрагмент на странице shop.html, в который нужно добавить товары.
     document.querySelector("#node_for_insert").innerHTML = data
       .map(product => `
@@ -17,8 +18,8 @@ fetch("./data/shop.json")
           <p class="margin_01rem">Заказать <input type="number" name="amount" value="0" min="0"></p>
         </li>
       `)
-      // Объединяем массив в одну строку (и убираем запятые).
-      .join("");
+    // Объединяем массив шаблонов и убираем запятые.
+    join("");
   })
   // Если загрузить файл или обработать данные не удалось, выводим ошибку в консоль.
   .catch(error => console.error("Не удалось загрузить каталог товаров:", error));
