@@ -26,6 +26,9 @@
 
 #### Примеры: <br>https://vmarshirov.github.io/g06u28/035_flex_js/  <br>https://vmarshirov.github.io/g06u28/040_bootstrap_js
 
+#### Полезные видео в https://disk.360.yandex.ru/d/KY-0xNxxSrHL-g
+
+
 #### Защита контрольной работы 09 декабря 
   
 #### Рекомендую досрочно
