@@ -22,4 +22,10 @@
   body {
     background-color: red;
   } */
-}
+/* 
+@media (min-width: 600px) {
+  p {
+    font-size: calc(1.0rem + 10vw);
+  }
+} */
+
