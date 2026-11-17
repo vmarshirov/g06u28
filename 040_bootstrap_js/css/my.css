@@ -5,27 +5,5 @@
 .people {
   align-self: center;
   height: 300px;
-  width: fit-content
+  width: fit-content;
 }
-
-/* a:hover {
-      background-color: rgb(70, 69, 161);
-    } */
-/*
- * Демонстрация адаптивности (media query).
- * Условие: ширина окна от 768px (md) до 1199.98px (до порога xl в Bootstrap).
- * В этом диапазоне фон страницы становится красным — это учебный пример,
- * позволяющий наглядно увидеть переход между брейкпоинтами при изменении
- * размера окна браузера. Для «боевого» сайта правило нужно удалить.
- */
-/* @media (min-width: 768px) and (max-width: 1199.98px) {
-  body {
-    background-color: red;
-  } */
-/* 
-@media (min-width: 600px) {
-  p {
-    font-size: calc(1.0rem + 10vw);
-  }
-} */
-
