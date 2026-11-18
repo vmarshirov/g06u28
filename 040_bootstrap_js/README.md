@@ -1,6 +1,3 @@
-## Пример 
-### https://vmarshirov.github.io/g06u28/040_bootstrap_js/
-
-## Рекомендуемое расширение
-### Bootstrap IntelliSense
+#### https://vmarshirov.github.io/g06u28/040_bootstrap_js/
+#### Рекомендуемое расширение: Bootstrap IntelliSense
 
